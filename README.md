@@ -1,3 +1,3 @@
-# playground-report
+# Test reports
 
-[Java](java/reports/tests/test)
+- [Java](java/reports/tests/test)
