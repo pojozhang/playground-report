@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.069s</div>
+<div class="counter">0.083s</div>
 <p>duration</p>
 </div>
 </td>
@@ -79,12 +79,12 @@
 </thead>
 <tr>
 <td class="success">should_call_around_and_before_and_after_and_after_running_sequentially_when_no_exception_thrown()</td>
-<td class="success">0.057s</td>
+<td class="success">0.067s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">should_call_around_and_before_and_after_throwing_sequentially_when_any_exception_thrown()</td>
-<td class="success">0.012s</td>
+<td class="success">0.016s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -92,22 +92,22 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>02:12:15.999 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
-02:12:16.003 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
-02:12:16.032 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [playground.spring.aop.EchoServiceAspectTest] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
-02:12:16.047 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [playground.spring.aop.EchoServiceAspectTest], using SpringBootContextLoader
-02:12:16.051 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [playground.spring.aop.EchoServiceAspectTest]: class path resource [playground/spring/aop/EchoServiceAspectTest-context.xml] does not exist
-02:12:16.051 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [playground.spring.aop.EchoServiceAspectTest]: class path resource [playground/spring/aop/EchoServiceAspectTestContext.groovy] does not exist
-02:12:16.051 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [playground.spring.aop.EchoServiceAspectTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-02:12:16.052 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [playground.spring.aop.EchoServiceAspectTest]: EchoServiceAspectTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-02:12:16.122 [Test worker] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [playground.spring.aop.EchoServiceAspectTest]
-02:12:16.213 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [/home/travis/build/pojozhang/playground/solutions/java/build/classes/java/main/playground/spring/Application.class]
-02:12:16.214 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration playground.spring.Application for test class playground.spring.aop.EchoServiceAspectTest
-02:12:16.356 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [playground.spring.aop.EchoServiceAspectTest]: using defaults.
-02:12:16.356 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
-02:12:16.382 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@798e82b1, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@6ee23359, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@51a05db2, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@5e6fa941, org.springframework.test.context.support.DirtiesContextTestExecutionListener@53792337, org.springframework.test.context.transaction.TransactionalTestExecutionListener@2c7eaafa, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@7fe02f0a, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@5c66b416, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@469c4436, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@1f6c0f65, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@610aebfd, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@8a535ce]
-02:12:16.386 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@392ed34b testClass = EchoServiceAspectTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [MergedContextConfiguration@c98de32 testClass = EchoServiceAspectTest, locations = '{}', classes = '{class playground.spring.Application}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@31181b3e, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@4e4b3bd5, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@74e7749c, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@67629660, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@2b981cd4], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map[[empty]]], class annotated with @DirtiesContext [false] with mode [null].
-02:12:16.419 [Test worker] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true, server.port=-1}
+<pre>09:02:32.421 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+09:02:32.426 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+09:02:32.450 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [playground.spring.aop.EchoServiceAspectTest] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+09:02:32.465 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [playground.spring.aop.EchoServiceAspectTest], using SpringBootContextLoader
+09:02:32.469 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [playground.spring.aop.EchoServiceAspectTest]: class path resource [playground/spring/aop/EchoServiceAspectTest-context.xml] does not exist
+09:02:32.470 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [playground.spring.aop.EchoServiceAspectTest]: class path resource [playground/spring/aop/EchoServiceAspectTestContext.groovy] does not exist
+09:02:32.471 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [playground.spring.aop.EchoServiceAspectTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+09:02:32.472 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [playground.spring.aop.EchoServiceAspectTest]: EchoServiceAspectTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+09:02:32.563 [Test worker] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [playground.spring.aop.EchoServiceAspectTest]
+09:02:32.653 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [/home/travis/build/pojozhang/playground/solutions/java/build/classes/java/main/playground/spring/Application.class]
+09:02:32.655 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration playground.spring.Application for test class playground.spring.aop.EchoServiceAspectTest
+09:02:32.807 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [playground.spring.aop.EchoServiceAspectTest]: using defaults.
+09:02:32.807 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+09:02:32.831 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@60bd1a14, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@4d93babf, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@32637466, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@13168df7, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1bf3583b, org.springframework.test.context.transaction.TransactionalTestExecutionListener@4be54fb8, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@620cd2e6, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@45d28265, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@44e13864, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@259827cf, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@21874a78, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@70972587]
+09:02:32.836 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@1b3b2b17 testClass = EchoServiceAspectTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [MergedContextConfiguration@3c81c50a testClass = EchoServiceAspectTest, locations = '{}', classes = '{class playground.spring.Application}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@4060fa26, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@6e521189, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@2f8f5e8d, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@78e96c22, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@7b5d7a7], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map[[empty]]], class annotated with @DirtiesContext [false] with mode [null].
+09:02:32.872 [Test worker] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true, server.port=-1}
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -117,24 +117,24 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::        (v2.1.3.RELEASE)
 
-2019-03-06 02:12:17.133  INFO 6194 --- [    Test worker] p.spring.aop.EchoServiceAspectTest       : Starting EchoServiceAspectTest on travis-job-844595aa-2cc5-42ab-bc04-ca19b4453f73 with PID 6194 (started by travis in /home/travis/build/pojozhang/playground/solutions/java)
-2019-03-06 02:12:17.138  INFO 6194 --- [    Test worker] p.spring.aop.EchoServiceAspectTest       : No active profile set, falling back to default profiles: default
-2019-03-06 02:12:18.111  INFO 6194 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2019-03-06 02:12:18.188  INFO 6194 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 68ms. Found 1 repository interfaces.
-2019-03-06 02:12:19.378  INFO 6194 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2019-03-06 02:12:19.604  INFO 6194 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2019-03-06 02:12:19.733  INFO 6194 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+2019-03-06 09:02:33.729  INFO 6127 --- [    Test worker] p.spring.aop.EchoServiceAspectTest       : Starting EchoServiceAspectTest on travis-job-0638e666-d770-484c-b3f0-db0c944b91d6 with PID 6127 (started by travis in /home/travis/build/pojozhang/playground/solutions/java)
+2019-03-06 09:02:33.740  INFO 6127 --- [    Test worker] p.spring.aop.EchoServiceAspectTest       : No active profile set, falling back to default profiles: default
+2019-03-06 09:02:35.121  INFO 6127 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-03-06 09:02:35.204  INFO 6127 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 74ms. Found 1 repository interfaces.
+2019-03-06 09:02:36.552  INFO 6127 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-03-06 09:02:36.809  INFO 6127 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-03-06 09:02:36.995  INFO 6127 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-2019-03-06 02:12:19.833  INFO 6194 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.7.Final}
-2019-03-06 02:12:19.835  INFO 6194 --- [    Test worker] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
-2019-03-06 02:12:20.118  INFO 6194 --- [    Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
-2019-03-06 02:12:20.336  INFO 6194 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2019-03-06 09:02:37.097  INFO 6127 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.7.Final}
+2019-03-06 09:02:37.100  INFO 6127 --- [    Test worker] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-03-06 09:02:37.385  INFO 6127 --- [    Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-03-06 09:02:37.651  INFO 6127 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
 Hibernate: drop table film if exists
 Hibernate: create table film (id bigint generated by default as identity, name varchar(255), primary key (id))
-2019-03-06 02:12:21.288  INFO 6194 --- [    Test worker] o.h.t.schema.internal.SchemaCreatorImpl  : HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@401b4ba7'
-2019-03-06 02:12:21.295  INFO 6194 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2019-03-06 02:12:22.913  INFO 6194 --- [    Test worker] p.spring.aop.EchoServiceAspectTest       : Started EchoServiceAspectTest in 6.492 seconds (JVM running for 77.079)
+2019-03-06 09:02:38.726  INFO 6127 --- [    Test worker] o.h.t.schema.internal.SchemaCreatorImpl  : HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@fd90e08'
+2019-03-06 09:02:38.732  INFO 6127 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-03-06 09:02:40.688  INFO 6127 --- [    Test worker] p.spring.aop.EchoServiceAspectTest       : Started EchoServiceAspectTest in 7.812 seconds (JVM running for 78.336)
 </pre>
 </span>
 </div>
@@ -146,7 +146,7 @@ Hibernate: create table film (id bigint generated by default as identity, name v
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 5.2.1</a> at Mar 6, 2019, 2:12:26 AM</p>
+<a href="http://www.gradle.org">Gradle 5.2.1</a> at Mar 6, 2019, 9:02:45 AM</p>
 </div>
 </div>
 </body>
