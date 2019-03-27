@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0s</div>
+<div class="counter">0.013s</div>
 <p>duration</p>
 </div>
 </td>
@@ -76,7 +76,7 @@
 <a name="initializationError"></a>
 <h3 class="failures">initializationError</h3>
 <span class="code">
-<pre>ElasticsearchStatusException[method [HEAD], host [http://localhost:9200], URI [/video?include_type_name=true&amp;ignore_unavailable=false&amp;expand_wildcards=open&amp;allow_no_indices=true], status line [HTTP/1.1 400 Bad Request]]; nested: ResponseException[method [HEAD], host [http://localhost:9200], URI [/video?include_type_name=true&amp;ignore_unavailable=false&amp;expand_wildcards=open&amp;allow_no_indices=true], status line [HTTP/1.1 400 Bad Request]]; nested: ResponseException[method [HEAD], host [http://localhost:9200], URI [/video?include_type_name=true&amp;ignore_unavailable=false&amp;expand_wildcards=open&amp;allow_no_indices=true], status line [HTTP/1.1 400 Bad Request]];
+<pre>ElasticsearchStatusException[method [HEAD], host [http://localhost:9200], URI [/article?include_type_name=true&amp;ignore_unavailable=false&amp;expand_wildcards=open&amp;allow_no_indices=true], status line [HTTP/1.1 400 Bad Request]]; nested: ResponseException[method [HEAD], host [http://localhost:9200], URI [/article?include_type_name=true&amp;ignore_unavailable=false&amp;expand_wildcards=open&amp;allow_no_indices=true], status line [HTTP/1.1 400 Bad Request]]; nested: ResponseException[method [HEAD], host [http://localhost:9200], URI [/article?include_type_name=true&amp;ignore_unavailable=false&amp;expand_wildcards=open&amp;allow_no_indices=true], status line [HTTP/1.1 400 Bad Request]];
 	at org.elasticsearch.client.RestHighLevelClient.parseResponseException(RestHighLevelClient.java:2027)
 	at org.elasticsearch.client.RestHighLevelClient.internalPerformRequest(RestHighLevelClient.java:1777)
 	at org.elasticsearch.client.RestHighLevelClient.performRequest(RestHighLevelClient.java:1734)
@@ -149,12 +149,12 @@
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:55)
 	at java.base/java.lang.Thread.run(Thread.java:834)
-Caused by: org.elasticsearch.client.ResponseException: method [HEAD], host [http://localhost:9200], URI [/video?include_type_name=true&amp;ignore_unavailable=false&amp;expand_wildcards=open&amp;allow_no_indices=true], status line [HTTP/1.1 400 Bad Request]
+Caused by: org.elasticsearch.client.ResponseException: method [HEAD], host [http://localhost:9200], URI [/article?include_type_name=true&amp;ignore_unavailable=false&amp;expand_wildcards=open&amp;allow_no_indices=true], status line [HTTP/1.1 400 Bad Request]
 	at org.elasticsearch.client.RestClient$SyncResponseListener.get(RestClient.java:936)
 	at org.elasticsearch.client.RestClient.performRequest(RestClient.java:233)
 	at org.elasticsearch.client.RestHighLevelClient.internalPerformRequest(RestHighLevelClient.java:1764)
 	... 70 more
-Caused by: org.elasticsearch.client.ResponseException: method [HEAD], host [http://localhost:9200], URI [/video?include_type_name=true&amp;ignore_unavailable=false&amp;expand_wildcards=open&amp;allow_no_indices=true], status line [HTTP/1.1 400 Bad Request]
+Caused by: org.elasticsearch.client.ResponseException: method [HEAD], host [http://localhost:9200], URI [/article?include_type_name=true&amp;ignore_unavailable=false&amp;expand_wildcards=open&amp;allow_no_indices=true], status line [HTTP/1.1 400 Bad Request]
 	at org.elasticsearch.client.RestClient$1.completed(RestClient.java:552)
 	at org.elasticsearch.client.RestClient$1.completed(RestClient.java:537)
 	at org.apache.http.concurrent.BasicFuture.completed(BasicFuture.java:122)
@@ -189,7 +189,7 @@ Caused by: org.elasticsearch.client.ResponseException: method [HEAD], host [http
 </thead>
 <tr>
 <td class="failures">initializationError</td>
-<td class="failures">0s</td>
+<td class="failures">0.013s</td>
 <td class="failures">failed</td>
 </tr>
 </table>
@@ -197,62 +197,62 @@ Caused by: org.elasticsearch.client.ResponseException: method [HEAD], host [http
 <div id="tab2" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>19:39:03.876 [Test worker] DEBUG org.apache.http.impl.nio.client.MainClientExec - [exchange: 1] start execution
-19:39:03.893 [Test worker] DEBUG org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: default
-19:39:03.904 [Test worker] DEBUG org.apache.http.client.protocol.RequestAuthCache - Re-using cached 'basic' auth scheme for http://localhost:9200
-19:39:03.907 [Test worker] DEBUG org.apache.http.client.protocol.RequestAuthCache - No credentials for preemptive authentication
-19:39:03.909 [Test worker] DEBUG org.apache.http.impl.nio.client.InternalHttpAsyncClient - [exchange: 1] Request connection for {}-&gt;http://localhost:9200
-19:39:03.911 [Test worker] DEBUG org.apache.http.impl.nio.conn.PoolingNHttpClientConnectionManager - Connection request: [route: {}-&gt;http://localhost:9200][total kept alive: 0; route allocated: 0 of 10; total allocated: 0 of 30]
-19:39:03.955 [I/O dispatcher 1] DEBUG org.apache.http.impl.nio.conn.PoolingNHttpClientConnectionManager - Connection leased: [id: http-outgoing-0][route: {}-&gt;http://localhost:9200][total kept alive: 0; route allocated: 1 of 10; total allocated: 1 of 30]
-19:39:03.957 [I/O dispatcher 1] DEBUG org.apache.http.impl.nio.client.InternalHttpAsyncClient - [exchange: 1] Connection allocated: CPoolProxy{http-outgoing-0 [ACTIVE]}
-19:39:03.958 [I/O dispatcher 1] DEBUG org.apache.http.impl.nio.conn.ManagedNHttpClientConnectionImpl - http-outgoing-0 127.0.0.1:56356&lt;-&gt;127.0.0.1:9200[ACTIVE][r:]: Set attribute http.nio.exchange-handler
-19:39:03.958 [I/O dispatcher 1] DEBUG org.apache.http.impl.nio.conn.ManagedNHttpClientConnectionImpl - http-outgoing-0 127.0.0.1:56356&lt;-&gt;127.0.0.1:9200[ACTIVE][rw:]: Event set [w]
-19:39:03.958 [I/O dispatcher 1] DEBUG org.apache.http.impl.nio.conn.ManagedNHttpClientConnectionImpl - http-outgoing-0 127.0.0.1:56356&lt;-&gt;127.0.0.1:9200[ACTIVE][rw:]: Set timeout 0
-19:39:03.959 [I/O dispatcher 1] DEBUG org.apache.http.impl.nio.client.InternalIODispatch - http-outgoing-0 [ACTIVE]: Connected
-19:39:03.959 [I/O dispatcher 1] DEBUG org.apache.http.impl.nio.conn.ManagedNHttpClientConnectionImpl - http-outgoing-0 127.0.0.1:56356&lt;-&gt;127.0.0.1:9200[ACTIVE][rw:]: Set attribute http.nio.http-exchange-state
-19:39:03.960 [I/O dispatcher 1] DEBUG org.apache.http.impl.nio.client.InternalHttpAsyncClient - Start connection routing
-19:39:03.969 [I/O dispatcher 1] DEBUG org.apache.http.impl.nio.client.MainClientExec - Connection route established
-19:39:03.969 [I/O dispatcher 1] DEBUG org.apache.http.impl.nio.client.MainClientExec - [exchange: 1] Attempt 1 to execute request
-19:39:03.969 [I/O dispatcher 1] DEBUG org.apache.http.impl.nio.client.MainClientExec - Target auth state: UNCHALLENGED
-19:39:03.970 [I/O dispatcher 1] DEBUG org.apache.http.impl.nio.client.MainClientExec - Proxy auth state: UNCHALLENGED
-19:39:03.970 [I/O dispatcher 1] DEBUG org.apache.http.impl.nio.conn.ManagedNHttpClientConnectionImpl - http-outgoing-0 127.0.0.1:56356&lt;-&gt;127.0.0.1:9200[ACTIVE][rw:]: Set timeout 30000
-19:39:03.971 [I/O dispatcher 1] DEBUG org.apache.http.headers - http-outgoing-0 &gt;&gt; HEAD /video?include_type_name=true&amp;ignore_unavailable=false&amp;expand_wildcards=open&amp;allow_no_indices=true HTTP/1.1
-19:39:03.971 [I/O dispatcher 1] DEBUG org.apache.http.headers - http-outgoing-0 &gt;&gt; Host: localhost:9200
-19:39:03.972 [I/O dispatcher 1] DEBUG org.apache.http.headers - http-outgoing-0 &gt;&gt; Connection: Keep-Alive
-19:39:03.972 [I/O dispatcher 1] DEBUG org.apache.http.headers - http-outgoing-0 &gt;&gt; User-Agent: Apache-HttpAsyncClient/4.1.2 (Java/11.0.2)
-19:39:03.973 [I/O dispatcher 1] DEBUG org.apache.http.impl.nio.conn.ManagedNHttpClientConnectionImpl - http-outgoing-0 127.0.0.1:56356&lt;-&gt;127.0.0.1:9200[ACTIVE][rw:]: Event set [w]
-19:39:03.973 [I/O dispatcher 1] DEBUG org.apache.http.impl.nio.client.MainClientExec - [exchange: 1] Request completed
-19:39:03.974 [I/O dispatcher 1] DEBUG org.apache.http.impl.nio.conn.ManagedNHttpClientConnectionImpl - http-outgoing-0 127.0.0.1:56356&lt;-&gt;127.0.0.1:9200[ACTIVE][rw:w]: 218 bytes written
-19:39:03.974 [I/O dispatcher 1] DEBUG org.apache.http.wire - http-outgoing-0 &gt;&gt; &quot;HEAD /video?include_type_name=true&amp;ignore_unavailable=false&amp;expand_wildcards=open&amp;allow_no_indices=true HTTP/1.1[\r][\n]&quot;
-19:39:03.974 [I/O dispatcher 1] DEBUG org.apache.http.wire - http-outgoing-0 &gt;&gt; &quot;Host: localhost:9200[\r][\n]&quot;
-19:39:03.975 [I/O dispatcher 1] DEBUG org.apache.http.wire - http-outgoing-0 &gt;&gt; &quot;Connection: Keep-Alive[\r][\n]&quot;
-19:39:03.975 [I/O dispatcher 1] DEBUG org.apache.http.wire - http-outgoing-0 &gt;&gt; &quot;User-Agent: Apache-HttpAsyncClient/4.1.2 (Java/11.0.2)[\r][\n]&quot;
-19:39:03.975 [I/O dispatcher 1] DEBUG org.apache.http.wire - http-outgoing-0 &gt;&gt; &quot;[\r][\n]&quot;
-19:39:03.976 [I/O dispatcher 1] DEBUG org.apache.http.impl.nio.client.InternalIODispatch - http-outgoing-0 [ACTIVE] Request ready
-19:39:03.976 [I/O dispatcher 1] DEBUG org.apache.http.impl.nio.conn.ManagedNHttpClientConnectionImpl - http-outgoing-0 127.0.0.1:56356&lt;-&gt;127.0.0.1:9200[ACTIVE][r:w]: Event cleared [w]
-19:39:04.056 [I/O dispatcher 1] DEBUG org.apache.http.impl.nio.conn.ManagedNHttpClientConnectionImpl - http-outgoing-0 127.0.0.1:56356&lt;-&gt;127.0.0.1:9200[ACTIVE][r:r]: 96 bytes read
-19:39:04.056 [I/O dispatcher 1] DEBUG org.apache.http.wire - http-outgoing-0 &lt;&lt; &quot;HTTP/1.1 400 Bad Request[\r][\n]&quot;
-19:39:04.057 [I/O dispatcher 1] DEBUG org.apache.http.wire - http-outgoing-0 &lt;&lt; &quot;content-type: application/json; charset=UTF-8[\r][\n]&quot;
-19:39:04.057 [I/O dispatcher 1] DEBUG org.apache.http.wire - http-outgoing-0 &lt;&lt; &quot;content-length: 275[\r][\n]&quot;
-19:39:04.057 [I/O dispatcher 1] DEBUG org.apache.http.wire - http-outgoing-0 &lt;&lt; &quot;[\r][\n]&quot;
-19:39:04.063 [I/O dispatcher 1] DEBUG org.apache.http.headers - http-outgoing-0 &lt;&lt; HTTP/1.1 400 Bad Request
-19:39:04.071 [I/O dispatcher 1] DEBUG org.apache.http.headers - http-outgoing-0 &lt;&lt; content-type: application/json; charset=UTF-8
-19:39:04.072 [I/O dispatcher 1] DEBUG org.apache.http.headers - http-outgoing-0 &lt;&lt; content-length: 275
-19:39:04.072 [I/O dispatcher 1] DEBUG org.apache.http.impl.nio.client.InternalIODispatch - http-outgoing-0 [ACTIVE] Response received
-19:39:04.073 [I/O dispatcher 1] DEBUG org.apache.http.impl.nio.client.MainClientExec - [exchange: 1] Response received HTTP/1.1 400 Bad Request
-19:39:04.079 [I/O dispatcher 1] DEBUG org.apache.http.impl.nio.client.InternalHttpAsyncClient - [exchange: 1] Connection can be kept alive indefinitely
-19:39:04.080 [I/O dispatcher 1] DEBUG org.apache.http.impl.nio.client.MainClientExec - [exchange: 1] Response processed
-19:39:04.081 [I/O dispatcher 1] DEBUG org.apache.http.impl.nio.client.InternalHttpAsyncClient - [exchange: 1] releasing connection
-19:39:04.081 [I/O dispatcher 1] DEBUG org.apache.http.impl.nio.conn.ManagedNHttpClientConnectionImpl - http-outgoing-0 127.0.0.1:56356&lt;-&gt;127.0.0.1:9200[ACTIVE][r:r]: Remove attribute http.nio.exchange-handler
-19:39:04.082 [I/O dispatcher 1] DEBUG org.apache.http.impl.nio.conn.PoolingNHttpClientConnectionManager - Releasing connection: [id: http-outgoing-0][route: {}-&gt;http://localhost:9200][total kept alive: 0; route allocated: 1 of 10; total allocated: 1 of 30]
-19:39:04.083 [I/O dispatcher 1] DEBUG org.apache.http.impl.nio.conn.PoolingNHttpClientConnectionManager - Connection [id: http-outgoing-0][route: {}-&gt;http://localhost:9200] can be kept alive indefinitely
-19:39:04.083 [I/O dispatcher 1] DEBUG org.apache.http.impl.nio.conn.ManagedNHttpClientConnectionImpl - http-outgoing-0 127.0.0.1:56356&lt;-&gt;127.0.0.1:9200[ACTIVE][r:r]: Set timeout 0
-19:39:04.084 [I/O dispatcher 1] DEBUG org.apache.http.impl.nio.conn.PoolingNHttpClientConnectionManager - Connection released: [id: http-outgoing-0][route: {}-&gt;http://localhost:9200][total kept alive: 1; route allocated: 1 of 10; total allocated: 1 of 30]
-19:39:04.093 [I/O dispatcher 1] DEBUG org.elasticsearch.client.RestClient - request [HEAD http://localhost:9200/video?include_type_name=true&amp;ignore_unavailable=false&amp;expand_wildcards=open&amp;allow_no_indices=true] returned [HTTP/1.1 400 Bad Request]
-19:39:04.214 [Test worker] DEBUG org.apache.http.impl.nio.conn.PoolingNHttpClientConnectionManager - Connection manager is shutting down
-19:39:04.215 [Test worker] DEBUG org.apache.http.impl.nio.conn.ManagedNHttpClientConnectionImpl - http-outgoing-0 127.0.0.1:56356&lt;-&gt;127.0.0.1:9200[ACTIVE][r:r]: Close
-19:39:04.217 [I/O dispatcher 1] DEBUG org.apache.http.impl.nio.client.InternalIODispatch - http-outgoing-0 [CLOSED]: Disconnected
-19:39:04.220 [Test worker] DEBUG org.apache.http.impl.nio.conn.PoolingNHttpClientConnectionManager - Connection manager shut down
+<pre>21:58:37.407 [Test worker] DEBUG org.apache.http.impl.nio.client.MainClientExec - [exchange: 1] start execution
+21:58:37.421 [Test worker] DEBUG org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: default
+21:58:37.431 [Test worker] DEBUG org.apache.http.client.protocol.RequestAuthCache - Re-using cached 'basic' auth scheme for http://localhost:9200
+21:58:37.432 [Test worker] DEBUG org.apache.http.client.protocol.RequestAuthCache - No credentials for preemptive authentication
+21:58:37.433 [Test worker] DEBUG org.apache.http.impl.nio.client.InternalHttpAsyncClient - [exchange: 1] Request connection for {}-&gt;http://localhost:9200
+21:58:37.435 [Test worker] DEBUG org.apache.http.impl.nio.conn.PoolingNHttpClientConnectionManager - Connection request: [route: {}-&gt;http://localhost:9200][total kept alive: 0; route allocated: 0 of 10; total allocated: 0 of 30]
+21:58:37.463 [I/O dispatcher 1] DEBUG org.apache.http.impl.nio.conn.PoolingNHttpClientConnectionManager - Connection leased: [id: http-outgoing-0][route: {}-&gt;http://localhost:9200][total kept alive: 0; route allocated: 1 of 10; total allocated: 1 of 30]
+21:58:37.465 [I/O dispatcher 1] DEBUG org.apache.http.impl.nio.client.InternalHttpAsyncClient - [exchange: 1] Connection allocated: CPoolProxy{http-outgoing-0 [ACTIVE]}
+21:58:37.466 [I/O dispatcher 1] DEBUG org.apache.http.impl.nio.conn.ManagedNHttpClientConnectionImpl - http-outgoing-0 127.0.0.1:54640&lt;-&gt;127.0.0.1:9200[ACTIVE][r:]: Set attribute http.nio.exchange-handler
+21:58:37.467 [I/O dispatcher 1] DEBUG org.apache.http.impl.nio.conn.ManagedNHttpClientConnectionImpl - http-outgoing-0 127.0.0.1:54640&lt;-&gt;127.0.0.1:9200[ACTIVE][rw:]: Event set [w]
+21:58:37.467 [I/O dispatcher 1] DEBUG org.apache.http.impl.nio.conn.ManagedNHttpClientConnectionImpl - http-outgoing-0 127.0.0.1:54640&lt;-&gt;127.0.0.1:9200[ACTIVE][rw:]: Set timeout 0
+21:58:37.467 [I/O dispatcher 1] DEBUG org.apache.http.impl.nio.client.InternalIODispatch - http-outgoing-0 [ACTIVE]: Connected
+21:58:37.468 [I/O dispatcher 1] DEBUG org.apache.http.impl.nio.conn.ManagedNHttpClientConnectionImpl - http-outgoing-0 127.0.0.1:54640&lt;-&gt;127.0.0.1:9200[ACTIVE][rw:]: Set attribute http.nio.http-exchange-state
+21:58:37.469 [I/O dispatcher 1] DEBUG org.apache.http.impl.nio.client.InternalHttpAsyncClient - Start connection routing
+21:58:37.470 [I/O dispatcher 1] DEBUG org.apache.http.impl.nio.client.MainClientExec - Connection route established
+21:58:37.471 [I/O dispatcher 1] DEBUG org.apache.http.impl.nio.client.MainClientExec - [exchange: 1] Attempt 1 to execute request
+21:58:37.471 [I/O dispatcher 1] DEBUG org.apache.http.impl.nio.client.MainClientExec - Target auth state: UNCHALLENGED
+21:58:37.472 [I/O dispatcher 1] DEBUG org.apache.http.impl.nio.client.MainClientExec - Proxy auth state: UNCHALLENGED
+21:58:37.472 [I/O dispatcher 1] DEBUG org.apache.http.impl.nio.conn.ManagedNHttpClientConnectionImpl - http-outgoing-0 127.0.0.1:54640&lt;-&gt;127.0.0.1:9200[ACTIVE][rw:]: Set timeout 30000
+21:58:37.472 [I/O dispatcher 1] DEBUG org.apache.http.headers - http-outgoing-0 &gt;&gt; HEAD /article?include_type_name=true&amp;ignore_unavailable=false&amp;expand_wildcards=open&amp;allow_no_indices=true HTTP/1.1
+21:58:37.473 [I/O dispatcher 1] DEBUG org.apache.http.headers - http-outgoing-0 &gt;&gt; Host: localhost:9200
+21:58:37.473 [I/O dispatcher 1] DEBUG org.apache.http.headers - http-outgoing-0 &gt;&gt; Connection: Keep-Alive
+21:58:37.473 [I/O dispatcher 1] DEBUG org.apache.http.headers - http-outgoing-0 &gt;&gt; User-Agent: Apache-HttpAsyncClient/4.1.2 (Java/11.0.2)
+21:58:37.474 [I/O dispatcher 1] DEBUG org.apache.http.impl.nio.conn.ManagedNHttpClientConnectionImpl - http-outgoing-0 127.0.0.1:54640&lt;-&gt;127.0.0.1:9200[ACTIVE][rw:]: Event set [w]
+21:58:37.475 [I/O dispatcher 1] DEBUG org.apache.http.impl.nio.client.MainClientExec - [exchange: 1] Request completed
+21:58:37.483 [I/O dispatcher 1] DEBUG org.apache.http.impl.nio.conn.ManagedNHttpClientConnectionImpl - http-outgoing-0 127.0.0.1:54640&lt;-&gt;127.0.0.1:9200[ACTIVE][rw:w]: 220 bytes written
+21:58:37.483 [I/O dispatcher 1] DEBUG org.apache.http.wire - http-outgoing-0 &gt;&gt; &quot;HEAD /article?include_type_name=true&amp;ignore_unavailable=false&amp;expand_wildcards=open&amp;allow_no_indices=true HTTP/1.1[\r][\n]&quot;
+21:58:37.484 [I/O dispatcher 1] DEBUG org.apache.http.wire - http-outgoing-0 &gt;&gt; &quot;Host: localhost:9200[\r][\n]&quot;
+21:58:37.487 [I/O dispatcher 1] DEBUG org.apache.http.wire - http-outgoing-0 &gt;&gt; &quot;Connection: Keep-Alive[\r][\n]&quot;
+21:58:37.487 [I/O dispatcher 1] DEBUG org.apache.http.wire - http-outgoing-0 &gt;&gt; &quot;User-Agent: Apache-HttpAsyncClient/4.1.2 (Java/11.0.2)[\r][\n]&quot;
+21:58:37.487 [I/O dispatcher 1] DEBUG org.apache.http.wire - http-outgoing-0 &gt;&gt; &quot;[\r][\n]&quot;
+21:58:37.488 [I/O dispatcher 1] DEBUG org.apache.http.impl.nio.client.InternalIODispatch - http-outgoing-0 [ACTIVE] Request ready
+21:58:37.491 [I/O dispatcher 1] DEBUG org.apache.http.impl.nio.conn.ManagedNHttpClientConnectionImpl - http-outgoing-0 127.0.0.1:54640&lt;-&gt;127.0.0.1:9200[ACTIVE][r:w]: Event cleared [w]
+21:58:37.545 [I/O dispatcher 1] DEBUG org.apache.http.impl.nio.conn.ManagedNHttpClientConnectionImpl - http-outgoing-0 127.0.0.1:54640&lt;-&gt;127.0.0.1:9200[ACTIVE][r:r]: 96 bytes read
+21:58:37.546 [I/O dispatcher 1] DEBUG org.apache.http.wire - http-outgoing-0 &lt;&lt; &quot;HTTP/1.1 400 Bad Request[\r][\n]&quot;
+21:58:37.546 [I/O dispatcher 1] DEBUG org.apache.http.wire - http-outgoing-0 &lt;&lt; &quot;content-type: application/json; charset=UTF-8[\r][\n]&quot;
+21:58:37.547 [I/O dispatcher 1] DEBUG org.apache.http.wire - http-outgoing-0 &lt;&lt; &quot;content-length: 279[\r][\n]&quot;
+21:58:37.547 [I/O dispatcher 1] DEBUG org.apache.http.wire - http-outgoing-0 &lt;&lt; &quot;[\r][\n]&quot;
+21:58:37.554 [I/O dispatcher 1] DEBUG org.apache.http.headers - http-outgoing-0 &lt;&lt; HTTP/1.1 400 Bad Request
+21:58:37.555 [I/O dispatcher 1] DEBUG org.apache.http.headers - http-outgoing-0 &lt;&lt; content-type: application/json; charset=UTF-8
+21:58:37.555 [I/O dispatcher 1] DEBUG org.apache.http.headers - http-outgoing-0 &lt;&lt; content-length: 279
+21:58:37.555 [I/O dispatcher 1] DEBUG org.apache.http.impl.nio.client.InternalIODispatch - http-outgoing-0 [ACTIVE] Response received
+21:58:37.555 [I/O dispatcher 1] DEBUG org.apache.http.impl.nio.client.MainClientExec - [exchange: 1] Response received HTTP/1.1 400 Bad Request
+21:58:37.571 [I/O dispatcher 1] DEBUG org.apache.http.impl.nio.client.InternalHttpAsyncClient - [exchange: 1] Connection can be kept alive indefinitely
+21:58:37.573 [I/O dispatcher 1] DEBUG org.apache.http.impl.nio.client.MainClientExec - [exchange: 1] Response processed
+21:58:37.573 [I/O dispatcher 1] DEBUG org.apache.http.impl.nio.client.InternalHttpAsyncClient - [exchange: 1] releasing connection
+21:58:37.574 [I/O dispatcher 1] DEBUG org.apache.http.impl.nio.conn.ManagedNHttpClientConnectionImpl - http-outgoing-0 127.0.0.1:54640&lt;-&gt;127.0.0.1:9200[ACTIVE][r:r]: Remove attribute http.nio.exchange-handler
+21:58:37.587 [I/O dispatcher 1] DEBUG org.apache.http.impl.nio.conn.PoolingNHttpClientConnectionManager - Releasing connection: [id: http-outgoing-0][route: {}-&gt;http://localhost:9200][total kept alive: 0; route allocated: 1 of 10; total allocated: 1 of 30]
+21:58:37.587 [I/O dispatcher 1] DEBUG org.apache.http.impl.nio.conn.PoolingNHttpClientConnectionManager - Connection [id: http-outgoing-0][route: {}-&gt;http://localhost:9200] can be kept alive indefinitely
+21:58:37.588 [I/O dispatcher 1] DEBUG org.apache.http.impl.nio.conn.ManagedNHttpClientConnectionImpl - http-outgoing-0 127.0.0.1:54640&lt;-&gt;127.0.0.1:9200[ACTIVE][r:r]: Set timeout 0
+21:58:37.588 [I/O dispatcher 1] DEBUG org.apache.http.impl.nio.conn.PoolingNHttpClientConnectionManager - Connection released: [id: http-outgoing-0][route: {}-&gt;http://localhost:9200][total kept alive: 1; route allocated: 1 of 10; total allocated: 1 of 30]
+21:58:37.591 [I/O dispatcher 1] DEBUG org.elasticsearch.client.RestClient - request [HEAD http://localhost:9200/article?include_type_name=true&amp;ignore_unavailable=false&amp;expand_wildcards=open&amp;allow_no_indices=true] returned [HTTP/1.1 400 Bad Request]
+21:58:37.724 [Test worker] DEBUG org.apache.http.impl.nio.conn.PoolingNHttpClientConnectionManager - Connection manager is shutting down
+21:58:37.725 [Test worker] DEBUG org.apache.http.impl.nio.conn.ManagedNHttpClientConnectionImpl - http-outgoing-0 127.0.0.1:54640&lt;-&gt;127.0.0.1:9200[ACTIVE][r:r]: Close
+21:58:37.728 [I/O dispatcher 1] DEBUG org.apache.http.impl.nio.client.InternalIODispatch - http-outgoing-0 [CLOSED]: Disconnected
+21:58:37.731 [Test worker] DEBUG org.apache.http.impl.nio.conn.PoolingNHttpClientConnectionManager - Connection manager shut down
 </pre>
 </span>
 </div>
@@ -264,7 +264,7 @@ Caused by: org.elasticsearch.client.ResponseException: method [HEAD], host [http
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 5.3</a> at Mar 27, 2019, 7:40:32 PM</p>
+<a href="http://www.gradle.org">Gradle 5.3</a> at Mar 27, 2019, 10:00:01 PM</p>
 </div>
 </div>
 </body>
