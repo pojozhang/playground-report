@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.068s</div>
+<div class="counter">0.105s</div>
 <p>duration</p>
 </div>
 </td>
@@ -63,6 +63,9 @@
 <li>
 <a href="#tab0">Tests</a>
 </li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
 </ul>
 <div id="tab0" class="tab">
 <h2>Tests</h2>
@@ -76,7 +79,7 @@
 </thead>
 <tr>
 <td class="success">should_show_buzz_when_number_is_divisible_by_5()</td>
-<td class="success">0.002s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -86,15 +89,51 @@
 </tr>
 <tr>
 <td class="success">should_show_fizzbuzz_when_number_is_divisible_by_3_and_5()</td>
-<td class="success">0.002s</td>
+<td class="success">0s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">should_show_raw_value_when_number_is_not_divisible_by_3_or_5()</td>
-<td class="success">0.063s</td>
+<td class="success">0.103s</td>
 <td class="success">passed</td>
 </tr>
 </table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>19:17:34.984 [pool-5-thread-1] DEBUG org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-test-group-1, groupId=test-group] Committed offset 10 for partition test-topic-eb3e8d-0
+19:17:34.986 [kafka-coordinator-heartbeat-thread | test-group] DEBUG org.apache.kafka.clients.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-test-group-1, groupId=test-group] Heartbeat thread has closed
+19:17:34.986 [pool-5-thread-1] DEBUG org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-test-group-1, groupId=test-group] Executing onLeavePrepare with generation Generation{generationId=1, memberId='consumer-test-group-1-9ed2b07b-f60f-415c-9228-2a441fba7ce3', protocol='range'} and memberId consumer-test-group-1-9ed2b07b-f60f-415c-9228-2a441fba7ce3
+19:17:34.987 [pool-5-thread-1] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-test-group-1, groupId=test-group] Revoke previously assigned partitions test-topic-eb3e8d-0
+19:17:34.987 [pool-5-thread-1] INFO org.apache.kafka.clients.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-test-group-1, groupId=test-group] Member consumer-test-group-1-9ed2b07b-f60f-415c-9228-2a441fba7ce3 sending LeaveGroup request to coordinator localhost:29092 (id: 2147483646 rack: null) due to the consumer is being closed
+19:17:34.992 [pool-5-thread-1] DEBUG org.apache.kafka.clients.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-test-group-1, groupId=test-group] Resetting generation due to consumer pro-actively leaving the group
+19:17:35.017 [pool-5-thread-1] DEBUG org.apache.kafka.clients.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-test-group-1, groupId=test-group] LeaveGroup request returned successfully
+19:17:35.019 [pool-5-thread-1] DEBUG org.apache.kafka.common.metrics.Metrics - Removed sensor with name connections-closed:
+19:17:35.019 [pool-5-thread-1] DEBUG org.apache.kafka.common.metrics.Metrics - Removed sensor with name connections-created:
+19:17:35.019 [pool-5-thread-1] DEBUG org.apache.kafka.common.metrics.Metrics - Removed sensor with name successful-authentication:
+19:17:35.019 [pool-5-thread-1] DEBUG org.apache.kafka.common.metrics.Metrics - Removed sensor with name successful-reauthentication:
+19:17:35.019 [pool-5-thread-1] DEBUG org.apache.kafka.common.metrics.Metrics - Removed sensor with name successful-authentication-no-reauth:
+19:17:35.019 [pool-5-thread-1] DEBUG org.apache.kafka.common.metrics.Metrics - Removed sensor with name failed-authentication:
+19:17:35.020 [pool-5-thread-1] DEBUG org.apache.kafka.common.metrics.Metrics - Removed sensor with name failed-reauthentication:
+19:17:35.020 [pool-5-thread-1] DEBUG org.apache.kafka.common.metrics.Metrics - Removed sensor with name reauthentication-latency:
+19:17:35.020 [pool-5-thread-1] DEBUG org.apache.kafka.common.metrics.Metrics - Removed sensor with name bytes-sent-received:
+19:17:35.020 [pool-5-thread-1] DEBUG org.apache.kafka.common.metrics.Metrics - Removed sensor with name bytes-sent:
+19:17:35.020 [pool-5-thread-1] DEBUG org.apache.kafka.common.metrics.Metrics - Removed sensor with name bytes-received:
+19:17:35.020 [pool-5-thread-1] DEBUG org.apache.kafka.common.metrics.Metrics - Removed sensor with name select-time:
+19:17:35.020 [pool-5-thread-1] DEBUG org.apache.kafka.common.metrics.Metrics - Removed sensor with name io-time:
+19:17:35.020 [pool-5-thread-1] DEBUG org.apache.kafka.common.metrics.Metrics - Removed sensor with name node--1.bytes-sent
+19:17:35.021 [pool-5-thread-1] DEBUG org.apache.kafka.common.metrics.Metrics - Removed sensor with name node--1.bytes-received
+19:17:35.021 [pool-5-thread-1] DEBUG org.apache.kafka.common.metrics.Metrics - Removed sensor with name node--1.latency
+19:17:35.021 [pool-5-thread-1] DEBUG org.apache.kafka.common.metrics.Metrics - Removed sensor with name node-1.bytes-sent
+19:17:35.021 [pool-5-thread-1] DEBUG org.apache.kafka.common.metrics.Metrics - Removed sensor with name node-1.bytes-received
+19:17:35.021 [pool-5-thread-1] DEBUG org.apache.kafka.common.metrics.Metrics - Removed sensor with name node-1.latency
+19:17:35.021 [pool-5-thread-1] DEBUG org.apache.kafka.common.metrics.Metrics - Removed sensor with name node-2147483646.bytes-sent
+19:17:35.021 [pool-5-thread-1] DEBUG org.apache.kafka.common.metrics.Metrics - Removed sensor with name node-2147483646.bytes-received
+19:17:35.022 [pool-5-thread-1] DEBUG org.apache.kafka.common.metrics.Metrics - Removed sensor with name node-2147483646.latency
+19:17:35.022 [pool-5-thread-1] DEBUG org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-test-group-1, groupId=test-group] Kafka consumer has been closed
+</pre>
+</span>
 </div>
 </div>
 <div id="footer">
@@ -104,7 +143,7 @@
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 6.0.1</a> at Dec 30, 2019, 1:25:04 AM</p>
+<a href="http://www.gradle.org">Gradle 6.0.1</a> at Jan 5, 2020, 7:18:21 PM</p>
 </div>
 </div>
 </body>
