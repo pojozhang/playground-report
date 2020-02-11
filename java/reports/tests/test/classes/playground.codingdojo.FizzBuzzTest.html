@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.133s</div>
+<div class="counter">0.153s</div>
 <p>duration</p>
 </div>
 </td>
@@ -79,22 +79,22 @@
 </thead>
 <tr>
 <td class="success">should_show_buzz_when_number_is_divisible_by_5()</td>
-<td class="success">0.001s</td>
+<td class="success">0.007s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">should_show_fizz_when_number_is_divisible_by_3()</td>
-<td class="success">0s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">should_show_fizzbuzz_when_number_is_divisible_by_3_and_5()</td>
 <td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
+<td class="success">should_show_fizzbuzz_when_number_is_divisible_by_3_and_5()</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
 <td class="success">should_show_raw_value_when_number_is_not_divisible_by_3_or_5()</td>
-<td class="success">0.131s</td>
+<td class="success">0.143s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -102,36 +102,30 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>19:22:08.317 [pool-5-thread-1] DEBUG org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-test-group-1, groupId=test-group] Committed offset 10 for partition test-topic-3a5b67-0
-19:22:08.317 [kafka-coordinator-heartbeat-thread | test-group] DEBUG org.apache.kafka.clients.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-test-group-1, groupId=test-group] Heartbeat thread has closed
-19:22:08.317 [pool-5-thread-1] DEBUG org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-test-group-1, groupId=test-group] Executing onLeavePrepare with generation Generation{generationId=1, memberId='consumer-test-group-1-37ecaa7c-d862-4db2-8ac5-07389751ce4a', protocol='range'} and memberId consumer-test-group-1-37ecaa7c-d862-4db2-8ac5-07389751ce4a
-19:22:08.318 [pool-5-thread-1] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-test-group-1, groupId=test-group] Revoke previously assigned partitions test-topic-3a5b67-0
-19:22:08.318 [pool-5-thread-1] INFO org.apache.kafka.clients.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-test-group-1, groupId=test-group] Member consumer-test-group-1-37ecaa7c-d862-4db2-8ac5-07389751ce4a sending LeaveGroup request to coordinator localhost:29092 (id: 2147483646 rack: null) due to the consumer is being closed
-19:22:08.319 [pool-5-thread-1] DEBUG org.apache.kafka.clients.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-test-group-1, groupId=test-group] Resetting generation due to consumer pro-actively leaving the group
-19:22:08.343 [pool-5-thread-1] DEBUG org.apache.kafka.clients.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-test-group-1, groupId=test-group] LeaveGroup request returned successfully
-19:22:08.346 [pool-5-thread-1] DEBUG org.apache.kafka.common.metrics.Metrics - Removed sensor with name connections-closed:
-19:22:08.346 [pool-5-thread-1] DEBUG org.apache.kafka.common.metrics.Metrics - Removed sensor with name connections-created:
-19:22:08.346 [pool-5-thread-1] DEBUG org.apache.kafka.common.metrics.Metrics - Removed sensor with name successful-authentication:
-19:22:08.346 [pool-5-thread-1] DEBUG org.apache.kafka.common.metrics.Metrics - Removed sensor with name successful-reauthentication:
-19:22:08.346 [pool-5-thread-1] DEBUG org.apache.kafka.common.metrics.Metrics - Removed sensor with name successful-authentication-no-reauth:
-19:22:08.346 [pool-5-thread-1] DEBUG org.apache.kafka.common.metrics.Metrics - Removed sensor with name failed-authentication:
-19:22:08.346 [pool-5-thread-1] DEBUG org.apache.kafka.common.metrics.Metrics - Removed sensor with name failed-reauthentication:
-19:22:08.346 [pool-5-thread-1] DEBUG org.apache.kafka.common.metrics.Metrics - Removed sensor with name reauthentication-latency:
-19:22:08.346 [pool-5-thread-1] DEBUG org.apache.kafka.common.metrics.Metrics - Removed sensor with name bytes-sent-received:
-19:22:08.347 [pool-5-thread-1] DEBUG org.apache.kafka.common.metrics.Metrics - Removed sensor with name bytes-sent:
-19:22:08.347 [pool-5-thread-1] DEBUG org.apache.kafka.common.metrics.Metrics - Removed sensor with name bytes-received:
-19:22:08.347 [pool-5-thread-1] DEBUG org.apache.kafka.common.metrics.Metrics - Removed sensor with name select-time:
-19:22:08.347 [pool-5-thread-1] DEBUG org.apache.kafka.common.metrics.Metrics - Removed sensor with name io-time:
-19:22:08.348 [pool-5-thread-1] DEBUG org.apache.kafka.common.metrics.Metrics - Removed sensor with name node--1.bytes-sent
-19:22:08.348 [pool-5-thread-1] DEBUG org.apache.kafka.common.metrics.Metrics - Removed sensor with name node--1.bytes-received
-19:22:08.348 [pool-5-thread-1] DEBUG org.apache.kafka.common.metrics.Metrics - Removed sensor with name node--1.latency
-19:22:08.349 [pool-5-thread-1] DEBUG org.apache.kafka.common.metrics.Metrics - Removed sensor with name node-1.bytes-sent
-19:22:08.349 [pool-5-thread-1] DEBUG org.apache.kafka.common.metrics.Metrics - Removed sensor with name node-1.bytes-received
-19:22:08.349 [pool-5-thread-1] DEBUG org.apache.kafka.common.metrics.Metrics - Removed sensor with name node-1.latency
-19:22:08.350 [pool-5-thread-1] DEBUG org.apache.kafka.common.metrics.Metrics - Removed sensor with name node-2147483646.bytes-sent
-19:22:08.350 [pool-5-thread-1] DEBUG org.apache.kafka.common.metrics.Metrics - Removed sensor with name node-2147483646.bytes-received
-19:22:08.350 [pool-5-thread-1] DEBUG org.apache.kafka.common.metrics.Metrics - Removed sensor with name node-2147483646.latency
-19:22:08.351 [pool-5-thread-1] DEBUG org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-test-group-1, groupId=test-group] Kafka consumer has been closed
+<pre>19:22:28.532 [pool-5-thread-1] DEBUG org.apache.kafka.clients.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-test-group-1, groupId=test-group] LeaveGroup request returned successfully
+19:22:28.534 [pool-5-thread-1] DEBUG org.apache.kafka.common.metrics.Metrics - Removed sensor with name connections-closed:
+19:22:28.534 [pool-5-thread-1] DEBUG org.apache.kafka.common.metrics.Metrics - Removed sensor with name connections-created:
+19:22:28.534 [pool-5-thread-1] DEBUG org.apache.kafka.common.metrics.Metrics - Removed sensor with name successful-authentication:
+19:22:28.535 [pool-5-thread-1] DEBUG org.apache.kafka.common.metrics.Metrics - Removed sensor with name successful-reauthentication:
+19:22:28.535 [pool-5-thread-1] DEBUG org.apache.kafka.common.metrics.Metrics - Removed sensor with name successful-authentication-no-reauth:
+19:22:28.535 [pool-5-thread-1] DEBUG org.apache.kafka.common.metrics.Metrics - Removed sensor with name failed-authentication:
+19:22:28.535 [pool-5-thread-1] DEBUG org.apache.kafka.common.metrics.Metrics - Removed sensor with name failed-reauthentication:
+19:22:28.535 [pool-5-thread-1] DEBUG org.apache.kafka.common.metrics.Metrics - Removed sensor with name reauthentication-latency:
+19:22:28.536 [pool-5-thread-1] DEBUG org.apache.kafka.common.metrics.Metrics - Removed sensor with name bytes-sent-received:
+19:22:28.537 [pool-5-thread-1] DEBUG org.apache.kafka.common.metrics.Metrics - Removed sensor with name bytes-sent:
+19:22:28.538 [pool-5-thread-1] DEBUG org.apache.kafka.common.metrics.Metrics - Removed sensor with name bytes-received:
+19:22:28.538 [pool-5-thread-1] DEBUG org.apache.kafka.common.metrics.Metrics - Removed sensor with name select-time:
+19:22:28.538 [pool-5-thread-1] DEBUG org.apache.kafka.common.metrics.Metrics - Removed sensor with name io-time:
+19:22:28.539 [pool-5-thread-1] DEBUG org.apache.kafka.common.metrics.Metrics - Removed sensor with name node--1.bytes-sent
+19:22:28.540 [pool-5-thread-1] DEBUG org.apache.kafka.common.metrics.Metrics - Removed sensor with name node--1.bytes-received
+19:22:28.540 [pool-5-thread-1] DEBUG org.apache.kafka.common.metrics.Metrics - Removed sensor with name node--1.latency
+19:22:28.541 [pool-5-thread-1] DEBUG org.apache.kafka.common.metrics.Metrics - Removed sensor with name node-1.bytes-sent
+19:22:28.542 [pool-5-thread-1] DEBUG org.apache.kafka.common.metrics.Metrics - Removed sensor with name node-1.bytes-received
+19:22:28.542 [pool-5-thread-1] DEBUG org.apache.kafka.common.metrics.Metrics - Removed sensor with name node-1.latency
+19:22:28.542 [pool-5-thread-1] DEBUG org.apache.kafka.common.metrics.Metrics - Removed sensor with name node-2147483646.bytes-sent
+19:22:28.547 [pool-5-thread-1] DEBUG org.apache.kafka.common.metrics.Metrics - Removed sensor with name node-2147483646.bytes-received
+19:22:28.547 [pool-5-thread-1] DEBUG org.apache.kafka.common.metrics.Metrics - Removed sensor with name node-2147483646.latency
+19:22:28.548 [pool-5-thread-1] DEBUG org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-test-group-1, groupId=test-group] Kafka consumer has been closed
 </pre>
 </span>
 </div>
@@ -143,7 +137,7 @@
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 6.1.1</a> at Feb 11, 2020, 7:22:53 PM</p>
+<a href="http://www.gradle.org">Gradle 6.1.1</a> at Feb 11, 2020, 7:23:18 PM</p>
 </div>
 </div>
 </body>
