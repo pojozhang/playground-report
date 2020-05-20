@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.596s</div>
+<div class="counter">0.503s</div>
 <p>duration</p>
 </div>
 </td>
@@ -79,7 +79,7 @@
 </thead>
 <tr>
 <td class="success">PROPAGATION_MANDATORY_should_throw_an_exception_if_no_transaction_exists()</td>
-<td class="success">0.006s</td>
+<td class="success">0.005s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -94,12 +94,12 @@
 </tr>
 <tr>
 <td class="success">PROPAGATION_NESTED_should_create_a_savepoint_if_one_transaction_exists()</td>
-<td class="success">0.016s</td>
+<td class="success">0.008s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">PROPAGATION_NESTED_should_rollback_if_outer_transaction_rolled_back()</td>
-<td class="success">0.021s</td>
+<td class="success">0.008s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -109,57 +109,57 @@
 </tr>
 <tr>
 <td class="success">PROPAGATION_NEVER_should_throw_an_exception_if_one_transaction_exists()</td>
-<td class="success">0.012s</td>
+<td class="success">0.010s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">PROPAGATION_NOT_SUPPORTED_should_execute_non_transactionally_if_no_transaction_exists()</td>
-<td class="success">0.008s</td>
+<td class="success">0.009s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">PROPAGATION_NOT_SUPPORTED_should_execute_non_transactionally_if_one_transaction_exists()</td>
-<td class="success">0.316s</td>
+<td class="success">0.275s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">PROPAGATION_REQUIRED_should_create_a_new_transaction_if_none_exists()</td>
-<td class="success">0.010s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">PROPAGATION_REQUIRED_should_not_create_a_new_transaction_if_one_exists()</td>
-<td class="success">0.021s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">PROPAGATION_REQUIRES_NEW_should_create_a_new_transaction_even_if_one_exists()</td>
 <td class="success">0.013s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">PROPAGATION_SUPPORTS_should_execute_non_transactionally_if_no_transaction_exists()</td>
-<td class="success">0.010s</td>
+<td class="success">PROPAGATION_REQUIRED_should_not_create_a_new_transaction_if_one_exists()</td>
+<td class="success">0.017s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">PROPAGATION_SUPPORTS_should_execute_transactionally_if_one_transaction_exists()</td>
-<td class="success">0.030s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">PROPAGATION_SUPPORTS_should_not_rollback_if_no_transaction_exists()</td>
-<td class="success">0.016s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">outer_transaction_could_not_commit_if_inner_PROPAGATION_MANDATORY_transaction_throws_an_exception()</td>
+<td class="success">PROPAGATION_REQUIRES_NEW_should_create_a_new_transaction_even_if_one_exists()</td>
 <td class="success">0.012s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">outer_transaction_could_not_commit_if_inner_PROPAGATION_REQUIRED_transaction_throws_an_exception()</td>
+<td class="success">PROPAGATION_SUPPORTS_should_execute_non_transactionally_if_no_transaction_exists()</td>
 <td class="success">0.008s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">PROPAGATION_SUPPORTS_should_execute_transactionally_if_one_transaction_exists()</td>
+<td class="success">0.012s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">PROPAGATION_SUPPORTS_should_not_rollback_if_no_transaction_exists()</td>
+<td class="success">0.014s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">outer_transaction_could_not_commit_if_inner_PROPAGATION_MANDATORY_transaction_throws_an_exception()</td>
+<td class="success">0.014s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">outer_transaction_could_not_commit_if_inner_PROPAGATION_REQUIRED_transaction_throws_an_exception()</td>
+<td class="success">0.006s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -169,7 +169,7 @@
 </tr>
 <tr>
 <td class="success">outer_transaction_should_not_rollback_if_internal_nested_transaction_rolled_back()</td>
-<td class="success">0.042s</td>
+<td class="success">0.037s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -177,12 +177,12 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>2020-05-20 19:30:31.163  INFO 8080 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [playground.spring.jpa.TransactionPropagationTest], using SpringBootContextLoader
-2020-05-20 19:30:31.168  INFO 8080 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [playground.spring.jpa.TransactionPropagationTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-2020-05-20 19:30:31.169  INFO 8080 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [playground.spring.jpa.TransactionPropagationTest]: TransactionPropagationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2020-05-20 19:30:31.180  INFO 8080 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration playground.spring.Application for test class playground.spring.jpa.TransactionPropagationTest
-2020-05-20 19:30:31.183  INFO 8080 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-2020-05-20 19:30:31.184  INFO 8080 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@4a95b17c, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@34d8ca9f, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@7e7fba77, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@51ecb25d, org.springframework.test.context.support.DirtiesContextTestExecutionListener@3615e74d, org.springframework.test.context.transaction.TransactionalTestExecutionListener@44eb5f22, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@47c4f9ca, org.springframework.test.context.event.EventPublishingTestExecutionListener@730ec535, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@6ab86b96, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@74b42bac, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@145e9659, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@117cde8a, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@38b1e3e8, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@6d0d4619]
+<pre>2020-05-20 19:31:34.403  INFO 8009 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [playground.spring.jpa.TransactionPropagationTest], using SpringBootContextLoader
+2020-05-20 19:31:34.405  INFO 8009 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [playground.spring.jpa.TransactionPropagationTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2020-05-20 19:31:34.406  INFO 8009 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [playground.spring.jpa.TransactionPropagationTest]: TransactionPropagationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2020-05-20 19:31:34.412  INFO 8009 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration playground.spring.Application for test class playground.spring.jpa.TransactionPropagationTest
+2020-05-20 19:31:34.414  INFO 8009 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2020-05-20 19:31:34.414  INFO 8009 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@61b379f3, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@49f7227d, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@7bd2186d, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@76aced2, org.springframework.test.context.support.DirtiesContextTestExecutionListener@7d6c532d, org.springframework.test.context.transaction.TransactionalTestExecutionListener@d787237, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@66020285, org.springframework.test.context.event.EventPublishingTestExecutionListener@374f5cc9, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@28a58436, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@6602b2df, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@10e292b0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@5d862d71, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@598686c3, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@2ae15366]
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -192,22 +192,22 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::        (v2.3.0.RELEASE)
 
-2020-05-20 19:30:31.240  INFO 8080 --- [    Test worker] p.spring.jpa.TransactionPropagationTest  : Starting TransactionPropagationTest on travis-job-97a19d5c-6398-4fc2-b08c-06682bf02a14 with PID 8080 (started by travis in /home/travis/build/pojozhang/playground/solutions/java)
-2020-05-20 19:30:31.241  INFO 8080 --- [    Test worker] p.spring.jpa.TransactionPropagationTest  : No active profile set, falling back to default profiles: default
-2020-05-20 19:30:31.502  INFO 8080 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
-2020-05-20 19:30:31.514  INFO 8080 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12ms. Found 1 JPA repository interfaces.
-2020-05-20 19:30:31.777  INFO 8080 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-05-20 19:30:31.851  INFO 8080 --- [         task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2020-05-20 19:30:31.870  INFO 8080 --- [         task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
-2020-05-20 19:30:31.879  INFO 8080 --- [         task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
-2020-05-20 19:30:31.879  INFO 8080 --- [         task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-05-20 19:31:34.459  INFO 8009 --- [    Test worker] p.spring.jpa.TransactionPropagationTest  : Starting TransactionPropagationTest on travis-job-8282c354-2f73-4fc3-a0ce-f8f00442d9a3 with PID 8009 (started by travis in /home/travis/build/pojozhang/playground/solutions/java)
+2020-05-20 19:31:34.460  INFO 8009 --- [    Test worker] p.spring.jpa.TransactionPropagationTest  : No active profile set, falling back to default profiles: default
+2020-05-20 19:31:34.678  INFO 8009 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-05-20 19:31:34.689  INFO 8009 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9ms. Found 1 JPA repository interfaces.
+2020-05-20 19:31:34.946  INFO 8009 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-20 19:31:34.982  INFO 8009 --- [         task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-05-20 19:31:34.998  INFO 8009 --- [         task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2020-05-20 19:31:35.011  INFO 8009 --- [         task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2020-05-20 19:31:35.011  INFO 8009 --- [         task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
 Hibernate: drop table if exists film CASCADE 
 Hibernate: create table film (id bigint generated by default as identity, name varchar(255), primary key (id))
-2020-05-20 19:30:31.975  INFO 8080 --- [         task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2020-05-20 19:30:31.989  INFO 8080 --- [         task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2020-05-20 19:30:32.230  INFO 8080 --- [    Test worker] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
-2020-05-20 19:30:32.320  INFO 8080 --- [    Test worker] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
-2020-05-20 19:30:32.327  INFO 8080 --- [    Test worker] p.spring.jpa.TransactionPropagationTest  : Started TransactionPropagationTest in 1.139 seconds (JVM running for 91.343)
+2020-05-20 19:31:35.073  INFO 8009 --- [         task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-05-20 19:31:35.080  INFO 8009 --- [         task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-05-20 19:31:35.314  INFO 8009 --- [    Test worker] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-05-20 19:31:35.434  INFO 8009 --- [    Test worker] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-05-20 19:31:35.441  INFO 8009 --- [    Test worker] p.spring.jpa.TransactionPropagationTest  : Started TransactionPropagationTest in 1.024 seconds (JVM running for 85.714)
 Hibernate: select filmentity0_.id as id1_0_, filmentity0_.name as name2_0_ from film filmentity0_
 Hibernate: select filmentity0_.id as id1_0_, filmentity0_.name as name2_0_ from film filmentity0_
 Hibernate: select count(*) as col_0_0_ from film filmentity0_
@@ -241,7 +241,7 @@ Hibernate: select filmentity0_.id as id1_0_, filmentity0_.name as name2_0_ from 
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 6.4.1</a> at May 20, 2020, 7:30:49 PM</p>
+<a href="http://www.gradle.org">Gradle 6.4.1</a> at May 20, 2020, 7:31:51 PM</p>
 </div>
 </div>
 </body>
