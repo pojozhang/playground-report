@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">9.158s</div>
+<div class="counter">19.163s</div>
 <p>duration</p>
 </div>
 </td>
@@ -79,7 +79,7 @@
 </thead>
 <tr>
 <td class="success">sleep_not_release_lock()</td>
-<td class="success">7.029s</td>
+<td class="success">7.035s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -89,12 +89,12 @@
 </tr>
 <tr>
 <td class="success">wait_notify()</td>
-<td class="success">2.008s</td>
+<td class="success">2.003s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">yield()</td>
-<td class="success">0.018s</td>
+<td class="success">10.022s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -102,39 +102,79 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>19:25:09.594 [Test worker-SendThread(127.0.0.1:12181)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x30000052e930001 after 1ms.
-19:25:10.473 [Test worker-SendThread(127.0.0.1:12183)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x30000052e930000 after 1ms.
-19:25:10.588 [Test worker-SendThread(127.0.0.1:12182)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x20000052dde0000 after 1ms.
-19:25:10.661 [Test worker-SendThread(127.0.0.1:12182)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x30000052e930001 after 2ms.
-19:25:10.680 [Test worker-SendThread(127.0.0.1:12181)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x10000053ce70000 after 1ms.
-19:25:10.927 [Test worker-SendThread(127.0.0.1:12181)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x30000052e930001 after 1ms.
-19:25:11.806 [Test worker-SendThread(127.0.0.1:12183)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x30000052e930000 after 1ms.
-19:25:11.922 [Test worker-SendThread(127.0.0.1:12182)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x20000052dde0000 after 1ms.
-19:25:11.994 [Test worker-SendThread(127.0.0.1:12182)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x30000052e930001 after 1ms.
-19:25:12.016 [Test worker-SendThread(127.0.0.1:12181)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x10000053ce70000 after 2ms.
-19:25:12.261 [Test worker-SendThread(127.0.0.1:12181)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x30000052e930001 after 1ms.
-19:25:13.142 [Test worker-SendThread(127.0.0.1:12183)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x30000052e930000 after 2ms.
-19:25:13.256 [Test worker-SendThread(127.0.0.1:12182)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x20000052dde0000 after 2ms.
-19:25:13.328 [Test worker-SendThread(127.0.0.1:12182)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x30000052e930001 after 1ms.
-19:25:13.349 [Test worker-SendThread(127.0.0.1:12181)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x10000053ce70000 after 1ms.
-19:25:13.595 [Test worker-SendThread(127.0.0.1:12181)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x30000052e930001 after 1ms.
-19:25:14.476 [Test worker-SendThread(127.0.0.1:12183)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x30000052e930000 after 1ms.
-19:25:14.590 [Test worker-SendThread(127.0.0.1:12182)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x20000052dde0000 after 1ms.
-19:25:14.661 [Test worker-SendThread(127.0.0.1:12182)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x30000052e930001 after 1ms.
-19:25:14.684 [Test worker-SendThread(127.0.0.1:12181)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x10000053ce70000 after 1ms.
-19:25:14.930 [Test worker-SendThread(127.0.0.1:12181)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x30000052e930001 after 1ms.
-19:25:15.812 [Test worker-SendThread(127.0.0.1:12183)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x30000052e930000 after 3ms.
-19:25:15.925 [Test worker-SendThread(127.0.0.1:12182)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x20000052dde0000 after 1ms.
-19:25:15.996 [Test worker-SendThread(127.0.0.1:12182)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x30000052e930001 after 1ms.
-19:25:16.017 [Test worker-SendThread(127.0.0.1:12181)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x10000053ce70000 after 1ms.
-19:25:16.263 [Test worker-SendThread(127.0.0.1:12181)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x30000052e930001 after 1ms.
-19:25:17.145 [Test worker-SendThread(127.0.0.1:12183)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x30000052e930000 after 1ms.
-19:25:17.259 [Test worker-SendThread(127.0.0.1:12182)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x20000052dde0000 after 1ms.
-19:25:17.329 [Test worker-SendThread(127.0.0.1:12182)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x30000052e930001 after 1ms.
-19:25:17.353 [Test worker-SendThread(127.0.0.1:12181)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x10000053ce70000 after 2ms.
-19:25:17.598 [Test worker-SendThread(127.0.0.1:12181)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x30000052e930001 after 1ms.
-19:25:18.480 [Test worker-SendThread(127.0.0.1:12183)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x30000052e930000 after 1ms.
-19:25:18.593 [Test worker-SendThread(127.0.0.1:12182)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x20000052dde0000 after 1ms.
+<pre>19:27:47.415 [Finalizer] DEBUG org.apache.http.impl.nio.conn.PoolingNHttpClientConnectionManager - Connection manager is shutting down
+19:27:47.416 [Finalizer] DEBUG org.apache.http.impl.nio.conn.PoolingNHttpClientConnectionManager - Connection manager shut down
+19:27:47.825 [Test worker-SendThread(127.0.0.1:12183)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x3000005af680000 after 1ms.
+19:27:47.974 [Test worker-SendThread(127.0.0.1:12181)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x1000005aeb30000 after 2ms.
+19:27:48.033 [Test worker-SendThread(127.0.0.1:12181)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x1000005aeb30001 after 2ms.
+19:27:48.064 [Test worker-SendThread(127.0.0.1:12182)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x1000005aeb30001 after 1ms.
+19:27:48.100 [Test worker-SendThread(127.0.0.1:12183)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x3000005af680001 after 1ms.
+19:27:49.159 [Test worker-SendThread(127.0.0.1:12183)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x3000005af680000 after 1ms.
+19:27:49.307 [Test worker-SendThread(127.0.0.1:12181)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x1000005aeb30000 after 1ms.
+19:27:49.366 [Test worker-SendThread(127.0.0.1:12181)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x1000005aeb30001 after 1ms.
+19:27:49.398 [Test worker-SendThread(127.0.0.1:12182)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x1000005aeb30001 after 1ms.
+19:27:49.433 [Test worker-SendThread(127.0.0.1:12183)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x3000005af680001 after 1ms.
+19:27:50.494 [Test worker-SendThread(127.0.0.1:12183)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x3000005af680000 after 1ms.
+19:27:50.642 [Test worker-SendThread(127.0.0.1:12181)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x1000005aeb30000 after 1ms.
+19:27:50.701 [Test worker-SendThread(127.0.0.1:12181)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x1000005aeb30001 after 1ms.
+19:27:50.733 [Test worker-SendThread(127.0.0.1:12182)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x1000005aeb30001 after 1ms.
+19:27:50.766 [Test worker-SendThread(127.0.0.1:12183)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x3000005af680001 after 1ms.
+19:27:51.829 [Test worker-SendThread(127.0.0.1:12183)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x3000005af680000 after 1ms.
+19:27:51.977 [Test worker-SendThread(127.0.0.1:12181)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x1000005aeb30000 after 1ms.
+19:27:52.035 [Test worker-SendThread(127.0.0.1:12181)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x1000005aeb30001 after 1ms.
+19:27:52.068 [Test worker-SendThread(127.0.0.1:12182)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x1000005aeb30001 after 1ms.
+19:27:52.100 [Test worker-SendThread(127.0.0.1:12183)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x3000005af680001 after 1ms.
+19:27:53.164 [Test worker-SendThread(127.0.0.1:12183)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x3000005af680000 after 1ms.
+19:27:53.311 [Test worker-SendThread(127.0.0.1:12181)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x1000005aeb30000 after 1ms.
+19:27:53.369 [Test worker-SendThread(127.0.0.1:12181)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x1000005aeb30001 after 1ms.
+19:27:53.403 [Test worker-SendThread(127.0.0.1:12182)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x1000005aeb30001 after 1ms.
+19:27:53.433 [Test worker-SendThread(127.0.0.1:12183)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x3000005af680001 after 1ms.
+19:27:54.499 [Test worker-SendThread(127.0.0.1:12183)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x3000005af680000 after 1ms.
+19:27:54.646 [Test worker-SendThread(127.0.0.1:12181)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x1000005aeb30000 after 1ms.
+19:27:54.701 [Test worker-SendThread(127.0.0.1:12181)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x1000005aeb30001 after 1ms.
+19:27:54.738 [Test worker-SendThread(127.0.0.1:12182)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x1000005aeb30001 after 1ms.
+19:27:54.768 [Test worker-SendThread(127.0.0.1:12183)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x3000005af680001 after 1ms.
+19:27:55.834 [Test worker-SendThread(127.0.0.1:12183)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x3000005af680000 after 1ms.
+19:27:55.980 [Test worker-SendThread(127.0.0.1:12181)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x1000005aeb30000 after 1ms.
+19:27:56.037 [Test worker-SendThread(127.0.0.1:12181)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x1000005aeb30001 after 1ms.
+19:27:56.074 [Test worker-SendThread(127.0.0.1:12182)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x1000005aeb30001 after 2ms.
+19:27:56.103 [Test worker-SendThread(127.0.0.1:12183)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x3000005af680001 after 1ms.
+19:27:57.169 [Test worker-SendThread(127.0.0.1:12183)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x3000005af680000 after 1ms.
+19:27:57.314 [Test worker-SendThread(127.0.0.1:12181)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x1000005aeb30000 after 2ms.
+19:27:57.370 [Test worker-SendThread(127.0.0.1:12181)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x1000005aeb30001 after 1ms.
+19:27:57.408 [Test worker-SendThread(127.0.0.1:12182)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x1000005aeb30001 after 2ms.
+19:27:57.439 [Test worker-SendThread(127.0.0.1:12183)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x3000005af680001 after 1ms.
+19:27:58.503 [Test worker-SendThread(127.0.0.1:12183)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x3000005af680000 after 1ms.
+19:27:58.648 [Test worker-SendThread(127.0.0.1:12181)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x1000005aeb30000 after 1ms.
+19:27:58.705 [Test worker-SendThread(127.0.0.1:12181)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x1000005aeb30001 after 1ms.
+19:27:58.742 [Test worker-SendThread(127.0.0.1:12182)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x1000005aeb30001 after 1ms.
+19:27:58.772 [Test worker-SendThread(127.0.0.1:12183)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x3000005af680001 after 1ms.
+19:27:59.838 [Test worker-SendThread(127.0.0.1:12183)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x3000005af680000 after 1ms.
+19:27:59.983 [Test worker-SendThread(127.0.0.1:12181)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x1000005aeb30000 after 1ms.
+19:28:00.039 [Test worker-SendThread(127.0.0.1:12181)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x1000005aeb30001 after 1ms.
+19:28:00.076 [Test worker-SendThread(127.0.0.1:12182)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x1000005aeb30001 after 1ms.
+19:28:00.107 [Test worker-SendThread(127.0.0.1:12183)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x3000005af680001 after 1ms.
+19:28:01.173 [Test worker-SendThread(127.0.0.1:12183)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x3000005af680000 after 1ms.
+19:28:01.318 [Test worker-SendThread(127.0.0.1:12181)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x1000005aeb30000 after 1ms.
+19:28:01.372 [Test worker-SendThread(127.0.0.1:12181)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x1000005aeb30001 after 1ms.
+19:28:01.410 [Test worker-SendThread(127.0.0.1:12182)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x1000005aeb30001 after 1ms.
+19:28:01.441 [Test worker-SendThread(127.0.0.1:12183)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x3000005af680001 after 1ms.
+19:28:02.508 [Test worker-SendThread(127.0.0.1:12183)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x3000005af680000 after 1ms.
+19:28:02.654 [Test worker-SendThread(127.0.0.1:12181)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x1000005aeb30000 after 1ms.
+19:28:02.706 [Test worker-SendThread(127.0.0.1:12181)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x1000005aeb30001 after 1ms.
+19:28:02.744 [Test worker-SendThread(127.0.0.1:12182)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x1000005aeb30001 after 1ms.
+19:28:02.776 [Test worker-SendThread(127.0.0.1:12183)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x3000005af680001 after 1ms.
+19:28:03.841 [Test worker-SendThread(127.0.0.1:12183)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x3000005af680000 after 1ms.
+19:28:03.988 [Test worker-SendThread(127.0.0.1:12181)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x1000005aeb30000 after 1ms.
+19:28:04.039 [Test worker-SendThread(127.0.0.1:12181)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x1000005aeb30001 after 1ms.
+19:28:04.079 [Test worker-SendThread(127.0.0.1:12182)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x1000005aeb30001 after 1ms.
+19:28:04.111 [Test worker-SendThread(127.0.0.1:12183)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x3000005af680001 after 1ms.
+19:28:05.176 [Test worker-SendThread(127.0.0.1:12183)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x3000005af680000 after 1ms.
+19:28:05.322 [Test worker-SendThread(127.0.0.1:12181)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x1000005aeb30000 after 1ms.
+19:28:05.372 [Test worker-SendThread(127.0.0.1:12181)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x1000005aeb30001 after 1ms.
+19:28:05.414 [Test worker-SendThread(127.0.0.1:12182)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x1000005aeb30001 after 1ms.
+19:28:05.446 [Test worker-SendThread(127.0.0.1:12183)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x3000005af680001 after 1ms.
+19:28:06.511 [Test worker-SendThread(127.0.0.1:12183)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x3000005af680000 after 1ms.
 </pre>
 </span>
 </div>
@@ -146,7 +186,7 @@
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 6.5.1</a> at Aug 13, 2020, 7:25:55 PM</p>
+<a href="http://www.gradle.org">Gradle 6.5.1</a> at Aug 13, 2020, 7:28:44 PM</p>
 </div>
 </div>
 </body>
