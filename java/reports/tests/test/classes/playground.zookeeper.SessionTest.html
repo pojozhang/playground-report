@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.107s</div>
+<div class="counter">0.136s</div>
 <p>duration</p>
 </div>
 </td>
@@ -79,17 +79,17 @@
 </thead>
 <tr>
 <td class="success">should_connect_to_zookeeper()</td>
-<td class="success">0.032s</td>
+<td class="success">0.027s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">should_not_connect_to_zookeeper_when_password_is_wrong()</td>
-<td class="success">0.035s</td>
+<td class="success">0.038s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">should_reconnect_to_zookeeper_when_password_is_correct()</td>
-<td class="success">0.040s</td>
+<td class="success">0.071s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -97,55 +97,50 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>17:07:59.119 [Test worker] INFO org.apache.zookeeper.ZooKeeper - Initiating client connection, connectString=127.0.0.1:12181,127.0.0.1:12182,127.0.0.1:12183 sessionTimeout=3000 watcher=playground.zookeeper.SessionTest$$Lambda$462/0x0000000100418440@5f978a34 sessionId=0x1 sessionPasswd=&lt;hidden&gt;
-17:07:59.119 [Test worker] INFO org.apache.zookeeper.ClientCnxnSocket - jute.maxbuffer value is 1048575 Bytes
-17:07:59.120 [Test worker] INFO org.apache.zookeeper.ClientCnxn - zookeeper.request.timeout value is 0. feature enabled=false
-17:07:59.143 [Test worker-SendThread(127.0.0.1:12181)] DEBUG org.apache.zookeeper.SaslServerPrincipal - Canonicalized address to localhost
-17:07:59.143 [Test worker-SendThread(127.0.0.1:12181)] INFO org.apache.zookeeper.ClientCnxn - Opening socket connection to server localhost/127.0.0.1:12181.
-17:07:59.143 [Test worker-SendThread(127.0.0.1:12181)] INFO org.apache.zookeeper.ClientCnxn - SASL config status: Will not attempt to authenticate using SASL (unknown error)
-17:07:59.144 [Test worker-SendThread(127.0.0.1:12181)] INFO org.apache.zookeeper.ClientCnxn - Socket connection established, initiating session, client: /127.0.0.1:36606, server: localhost/127.0.0.1:12181
-17:07:59.144 [Test worker-SendThread(127.0.0.1:12181)] DEBUG org.apache.zookeeper.ClientCnxn - Session establishment request sent on localhost/127.0.0.1:12181
-17:07:59.154 [Test worker-EventThread] INFO org.apache.zookeeper.ClientCnxn - EventThread shut down for session: 0x1
-17:07:59.157 [Test worker-SendThread(127.0.0.1:12181)] WARN org.apache.zookeeper.ClientCnxn - Unable to reconnect to ZooKeeper service, session 0x1 has expired
-17:07:59.160 [Test worker] INFO org.apache.zookeeper.ZooKeeper - Initiating client connection, connectString=127.0.0.1:12181,127.0.0.1:12182,127.0.0.1:12183 sessionTimeout=3000 watcher=playground.zookeeper.SessionTest$$Lambda$463/0x0000000100418c40@30af131
-17:07:59.160 [Test worker-SendThread(127.0.0.1:12181)] WARN org.apache.zookeeper.ClientCnxn - Session 0x1 for sever localhost/127.0.0.1:12181, Closing socket connection. Attempting reconnect except it is a SessionExpiredException.
+<pre>19:27:28.973 [Test worker] INFO org.apache.zookeeper.ZooKeeper - Initiating client connection, connectString=127.0.0.1:12181,127.0.0.1:12182,127.0.0.1:12183 sessionTimeout=3000 watcher=playground.zookeeper.SessionTest$$Lambda$462/0x0000000100418440@5babacd1 sessionId=0x1 sessionPasswd=&lt;hidden&gt;
+19:27:28.974 [Test worker] INFO org.apache.zookeeper.ClientCnxnSocket - jute.maxbuffer value is 1048575 Bytes
+19:27:28.974 [Test worker] INFO org.apache.zookeeper.ClientCnxn - zookeeper.request.timeout value is 0. feature enabled=false
+19:27:28.982 [Test worker-SendThread(127.0.0.1:12183)] DEBUG org.apache.zookeeper.SaslServerPrincipal - Canonicalized address to localhost
+19:27:28.982 [Test worker-SendThread(127.0.0.1:12183)] INFO org.apache.zookeeper.ClientCnxn - Opening socket connection to server localhost/127.0.0.1:12183.
+19:27:28.983 [Test worker-SendThread(127.0.0.1:12183)] INFO org.apache.zookeeper.ClientCnxn - SASL config status: Will not attempt to authenticate using SASL (unknown error)
+19:27:28.983 [Test worker-SendThread(127.0.0.1:12183)] INFO org.apache.zookeeper.ClientCnxn - Socket connection established, initiating session, client: /127.0.0.1:58878, server: localhost/127.0.0.1:12183
+19:27:28.984 [Test worker-SendThread(127.0.0.1:12183)] DEBUG org.apache.zookeeper.ClientCnxn - Session establishment request sent on localhost/127.0.0.1:12183
+19:27:28.990 [Test worker-SendThread(127.0.0.1:12183)] WARN org.apache.zookeeper.ClientCnxn - Unable to reconnect to ZooKeeper service, session 0x1 has expired
+19:27:28.994 [Test worker-SendThread(127.0.0.1:12183)] WARN org.apache.zookeeper.ClientCnxn - Session 0x1 for sever localhost/127.0.0.1:12183, Closing socket connection. Attempting reconnect except it is a SessionExpiredException.
 org.apache.zookeeper.ClientCnxn$SessionExpiredException: Unable to reconnect to ZooKeeper service, session 0x1 has expired
 	at org.apache.zookeeper.ClientCnxn$SendThread.onConnected(ClientCnxn.java:1419)
 	at org.apache.zookeeper.ClientCnxnSocket.readConnectResult(ClientCnxnSocket.java:154)
 	at org.apache.zookeeper.ClientCnxnSocketNIO.doIO(ClientCnxnSocketNIO.java:86)
 	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:350)
 	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1275)
-17:07:59.161 [Test worker] INFO org.apache.zookeeper.ClientCnxnSocket - jute.maxbuffer value is 1048575 Bytes
-17:07:59.161 [Test worker] INFO org.apache.zookeeper.ClientCnxn - zookeeper.request.timeout value is 0. feature enabled=false
-17:07:59.162 [Test worker-SendThread(127.0.0.1:12183)] DEBUG org.apache.zookeeper.SaslServerPrincipal - Canonicalized address to localhost
-17:07:59.163 [Test worker-SendThread(127.0.0.1:12183)] INFO org.apache.zookeeper.ClientCnxn - Opening socket connection to server localhost/127.0.0.1:12183.
-17:07:59.163 [Test worker-SendThread(127.0.0.1:12183)] INFO org.apache.zookeeper.ClientCnxn - SASL config status: Will not attempt to authenticate using SASL (unknown error)
-17:07:59.164 [Test worker-SendThread(127.0.0.1:12183)] INFO org.apache.zookeeper.ClientCnxn - Socket connection established, initiating session, client: /127.0.0.1:45100, server: localhost/127.0.0.1:12183
-17:07:59.165 [Test worker-SendThread(127.0.0.1:12183)] DEBUG org.apache.zookeeper.ClientCnxn - Session establishment request sent on localhost/127.0.0.1:12183
-17:07:59.174 [Test worker-SendThread(127.0.0.1:12183)] INFO org.apache.zookeeper.ClientCnxn - Session establishment complete on server localhost/127.0.0.1:12183, session id = 0x300000a4aca0001, negotiated timeout = 4000
-17:07:59.175 [Test worker] INFO org.apache.zookeeper.ZooKeeper - Initiating client connection, connectString=127.0.0.1:12181,127.0.0.1:12182,127.0.0.1:12183 sessionTimeout=3000 watcher=playground.zookeeper.SessionTest$$Lambda$465/0x0000000100419040@5b2a24a2 sessionId=0x300000a4aca0001 sessionPasswd=&lt;hidden&gt;
-17:07:59.175 [Test worker] INFO org.apache.zookeeper.ClientCnxnSocket - jute.maxbuffer value is 1048575 Bytes
-17:07:59.175 [Test worker] INFO org.apache.zookeeper.ClientCnxn - zookeeper.request.timeout value is 0. feature enabled=false
-17:07:59.192 [Test worker-SendThread(127.0.0.1:12183)] DEBUG org.apache.zookeeper.SaslServerPrincipal - Canonicalized address to localhost
-17:07:59.192 [Test worker-SendThread(127.0.0.1:12183)] INFO org.apache.zookeeper.ClientCnxn - Opening socket connection to server localhost/127.0.0.1:12183.
-17:07:59.192 [Test worker-SendThread(127.0.0.1:12183)] INFO org.apache.zookeeper.ClientCnxn - SASL config status: Will not attempt to authenticate using SASL (unknown error)
-17:07:59.192 [Test worker-SendThread(127.0.0.1:12183)] INFO org.apache.zookeeper.ClientCnxn - Socket connection established, initiating session, client: /127.0.0.1:45104, server: localhost/127.0.0.1:12183
-17:07:59.192 [Test worker-SendThread(127.0.0.1:12183)] DEBUG org.apache.zookeeper.ClientCnxn - Session establishment request sent on localhost/127.0.0.1:12183
-17:07:59.195 [Test worker-SendThread(127.0.0.1:12183)] WARN org.apache.zookeeper.ClientCnxn - Session 0x300000a4aca0001 for sever localhost/127.0.0.1:12183, Closing socket connection. Attempting reconnect except it is a SessionExpiredException.
-org.apache.zookeeper.ClientCnxn$EndOfStreamException: Unable to read additional data from server sessionid 0x300000a4aca0001, likely server has closed socket
-	at org.apache.zookeeper.ClientCnxnSocketNIO.doIO(ClientCnxnSocketNIO.java:77)
-	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:350)
-	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1275)
-17:07:59.197 [Test worker-SendThread(127.0.0.1:12183)] INFO org.apache.zookeeper.ClientCnxn - Session establishment complete on server localhost/127.0.0.1:12183, session id = 0x300000a4aca0001, negotiated timeout = 4000
-17:07:59.200 [Test worker] INFO org.apache.zookeeper.ZooKeeper - Initiating client connection, connectString=127.0.0.1:12181,127.0.0.1:12182,127.0.0.1:12183 sessionTimeout=3000 watcher=playground.zookeeper.SessionTest$$Lambda$466/0x0000000100419440@5b8847c0
-17:07:59.200 [Test worker] INFO org.apache.zookeeper.ClientCnxnSocket - jute.maxbuffer value is 1048575 Bytes
-17:07:59.200 [Test worker] INFO org.apache.zookeeper.ClientCnxn - zookeeper.request.timeout value is 0. feature enabled=false
-17:07:59.209 [Test worker-SendThread(127.0.0.1:12181)] DEBUG org.apache.zookeeper.SaslServerPrincipal - Canonicalized address to localhost
-17:07:59.209 [Test worker-SendThread(127.0.0.1:12181)] INFO org.apache.zookeeper.ClientCnxn - Opening socket connection to server localhost/127.0.0.1:12181.
-17:07:59.210 [Test worker-SendThread(127.0.0.1:12181)] INFO org.apache.zookeeper.ClientCnxn - SASL config status: Will not attempt to authenticate using SASL (unknown error)
-17:07:59.211 [Test worker-SendThread(127.0.0.1:12181)] INFO org.apache.zookeeper.ClientCnxn - Socket connection established, initiating session, client: /127.0.0.1:36618, server: localhost/127.0.0.1:12181
-17:07:59.211 [Test worker-SendThread(127.0.0.1:12181)] DEBUG org.apache.zookeeper.ClientCnxn - Session establishment request sent on localhost/127.0.0.1:12181
-17:07:59.224 [Test worker-SendThread(127.0.0.1:12181)] INFO org.apache.zookeeper.ClientCnxn - Session establishment complete on server localhost/127.0.0.1:12181, session id = 0x100000a4f5c0001, negotiated timeout = 4000
+19:27:28.997 [Test worker-EventThread] INFO org.apache.zookeeper.ClientCnxn - EventThread shut down for session: 0x1
+19:27:29.008 [Test worker] INFO org.apache.zookeeper.ZooKeeper - Initiating client connection, connectString=127.0.0.1:12181,127.0.0.1:12182,127.0.0.1:12183 sessionTimeout=3000 watcher=playground.zookeeper.SessionTest$$Lambda$464/0x0000000100418c40@6e389194
+19:27:29.009 [Test worker] INFO org.apache.zookeeper.ClientCnxnSocket - jute.maxbuffer value is 1048575 Bytes
+19:27:29.009 [Test worker] INFO org.apache.zookeeper.ClientCnxn - zookeeper.request.timeout value is 0. feature enabled=false
+19:27:29.022 [Test worker-SendThread(127.0.0.1:12181)] DEBUG org.apache.zookeeper.SaslServerPrincipal - Canonicalized address to localhost
+19:27:29.022 [Test worker-SendThread(127.0.0.1:12181)] INFO org.apache.zookeeper.ClientCnxn - Opening socket connection to server localhost/127.0.0.1:12181.
+19:27:29.022 [Test worker-SendThread(127.0.0.1:12181)] INFO org.apache.zookeeper.ClientCnxn - SASL config status: Will not attempt to authenticate using SASL (unknown error)
+19:27:29.023 [Test worker-SendThread(127.0.0.1:12181)] INFO org.apache.zookeeper.ClientCnxn - Socket connection established, initiating session, client: /127.0.0.1:44374, server: localhost/127.0.0.1:12181
+19:27:29.023 [Test worker-SendThread(127.0.0.1:12181)] DEBUG org.apache.zookeeper.ClientCnxn - Session establishment request sent on localhost/127.0.0.1:12181
+19:27:29.045 [Test worker-SendThread(127.0.0.1:12181)] INFO org.apache.zookeeper.ClientCnxn - Session establishment complete on server localhost/127.0.0.1:12181, session id = 0x100000758230001, negotiated timeout = 4000
+19:27:29.046 [Test worker] INFO org.apache.zookeeper.ZooKeeper - Initiating client connection, connectString=127.0.0.1:12181,127.0.0.1:12182,127.0.0.1:12183 sessionTimeout=3000 watcher=playground.zookeeper.SessionTest$$Lambda$465/0x0000000100419040@403735cf sessionId=0x100000758230001 sessionPasswd=&lt;hidden&gt;
+19:27:29.047 [Test worker] INFO org.apache.zookeeper.ClientCnxnSocket - jute.maxbuffer value is 1048575 Bytes
+19:27:29.047 [Test worker] INFO org.apache.zookeeper.ClientCnxn - zookeeper.request.timeout value is 0. feature enabled=false
+19:27:29.069 [Test worker-SendThread(127.0.0.1:12183)] DEBUG org.apache.zookeeper.SaslServerPrincipal - Canonicalized address to localhost
+19:27:29.070 [Test worker-SendThread(127.0.0.1:12183)] INFO org.apache.zookeeper.ClientCnxn - Opening socket connection to server localhost/127.0.0.1:12183.
+19:27:29.070 [Test worker-SendThread(127.0.0.1:12183)] INFO org.apache.zookeeper.ClientCnxn - SASL config status: Will not attempt to authenticate using SASL (unknown error)
+19:27:29.070 [Test worker-SendThread(127.0.0.1:12183)] INFO org.apache.zookeeper.ClientCnxn - Socket connection established, initiating session, client: /127.0.0.1:58886, server: localhost/127.0.0.1:12183
+19:27:29.071 [Test worker-SendThread(127.0.0.1:12183)] DEBUG org.apache.zookeeper.ClientCnxn - Session establishment request sent on localhost/127.0.0.1:12183
+19:27:29.077 [Test worker-SendThread(127.0.0.1:12183)] INFO org.apache.zookeeper.ClientCnxn - Session establishment complete on server localhost/127.0.0.1:12183, session id = 0x100000758230001, negotiated timeout = 4000
+19:27:29.079 [Test worker] INFO org.apache.zookeeper.ZooKeeper - Initiating client connection, connectString=127.0.0.1:12181,127.0.0.1:12182,127.0.0.1:12183 sessionTimeout=3000 watcher=playground.zookeeper.SessionTest$$Lambda$466/0x0000000100419440@55834880
+19:27:29.079 [Test worker] INFO org.apache.zookeeper.ClientCnxnSocket - jute.maxbuffer value is 1048575 Bytes
+19:27:29.080 [Test worker] INFO org.apache.zookeeper.ClientCnxn - zookeeper.request.timeout value is 0. feature enabled=false
+19:27:29.087 [Test worker-SendThread(127.0.0.1:12181)] DEBUG org.apache.zookeeper.SaslServerPrincipal - Canonicalized address to localhost
+19:27:29.087 [Test worker-SendThread(127.0.0.1:12181)] INFO org.apache.zookeeper.ClientCnxn - Opening socket connection to server localhost/127.0.0.1:12181.
+19:27:29.088 [Test worker-SendThread(127.0.0.1:12181)] INFO org.apache.zookeeper.ClientCnxn - SASL config status: Will not attempt to authenticate using SASL (unknown error)
+19:27:29.090 [Test worker-SendThread(127.0.0.1:12181)] INFO org.apache.zookeeper.ClientCnxn - Socket connection established, initiating session, client: /127.0.0.1:44382, server: localhost/127.0.0.1:12181
+19:27:29.090 [Test worker-SendThread(127.0.0.1:12181)] DEBUG org.apache.zookeeper.ClientCnxn - Session establishment request sent on localhost/127.0.0.1:12181
+19:27:29.105 [Test worker-SendThread(127.0.0.1:12181)] INFO org.apache.zookeeper.ClientCnxn - Session establishment complete on server localhost/127.0.0.1:12181, session id = 0x100000758230002, negotiated timeout = 4000
 </pre>
 </span>
 </div>
@@ -157,7 +152,7 @@ org.apache.zookeeper.ClientCnxn$EndOfStreamException: Unable to read additional 
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 6.7.1</a> at Dec 10, 2020, 5:08:52 PM</p>
+<a href="http://www.gradle.org">Gradle 6.7.1</a> at Dec 13, 2020, 7:28:22 PM</p>
 </div>
 </div>
 </body>
