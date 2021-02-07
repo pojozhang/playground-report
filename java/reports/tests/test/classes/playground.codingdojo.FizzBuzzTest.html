@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.014s</div>
+<div class="counter">0.088s</div>
 <p>duration</p>
 </div>
 </td>
@@ -79,22 +79,22 @@
 </thead>
 <tr>
 <td class="success">should_show_buzz_when_number_is_divisible_by_5()</td>
-<td class="success">0.001s</td>
+<td class="success">0.008s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">should_show_fizz_when_number_is_divisible_by_3()</td>
-<td class="success">0s</td>
+<td class="success">0.027s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">should_show_fizzbuzz_when_number_is_divisible_by_3_and_5()</td>
-<td class="success">0.007s</td>
+<td class="success">0.006s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">should_show_raw_value_when_number_is_not_divisible_by_3_or_5()</td>
-<td class="success">0.006s</td>
+<td class="success">0.047s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -102,14 +102,22 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>01:51:45.514 [pool-5-thread-1] DEBUG org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-test-group-1, groupId=test-group] Received OFFSET_COMMIT response from node 2147483646 for request with header RequestHeader(apiKey=OFFSET_COMMIT, apiVersion=8, clientId=consumer-test-group-1, correlationId=70): OffsetCommitResponseData(throttleTimeMs=0, topics=[OffsetCommitResponseTopic(name='test-topic-85e7f2', partitions=[OffsetCommitResponsePartition(partitionIndex=0, errorCode=0)])])
-01:51:45.514 [pool-5-thread-1] DEBUG org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-test-group-1, groupId=test-group] Committed offset 10 for partition test-topic-85e7f2-0
-01:51:45.514 [kafka-coordinator-heartbeat-thread | test-group] DEBUG org.apache.kafka.clients.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-test-group-1, groupId=test-group] Heartbeat thread has closed
-01:51:45.520 [pool-5-thread-1] DEBUG org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-test-group-1, groupId=test-group] Executing onLeavePrepare with generation Generation{generationId=1, memberId='consumer-test-group-1-86b72345-ae85-481f-b42a-4391cfcdaf26', protocol='range'} and memberId consumer-test-group-1-86b72345-ae85-481f-b42a-4391cfcdaf26
-01:51:45.520 [pool-5-thread-1] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-test-group-1, groupId=test-group] Revoke previously assigned partitions test-topic-85e7f2-0
-01:51:45.520 [pool-5-thread-1] INFO org.apache.kafka.clients.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-test-group-1, groupId=test-group] Member consumer-test-group-1-86b72345-ae85-481f-b42a-4391cfcdaf26 sending LeaveGroup request to coordinator localhost:29092 (id: 2147483646 rack: null) due to the consumer is being closed
-01:51:45.528 [pool-5-thread-1] DEBUG org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-test-group-1, groupId=test-group] Sending LEAVE_GROUP request with header RequestHeader(apiKey=LEAVE_GROUP, apiVersion=4, clientId=consumer-test-group-1, correlationId=71) and timeout 30000 to node 2147483646: {group_id=test-group,members=[{member_id=consumer-test-group-1-86b72345-ae85-481f-b42a-4391cfcdaf26,group_instance_id=null,_tagged_fields={}}],_tagged_fields={}}
-01:51:45.529 [pool-5-thread-1] DEBUG org.apache.kafka.clients.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-test-group-1, groupId=test-group] Resetting generation due to consumer pro-actively leaving the group
+<pre>19:29:36.439 [Test worker-SendThread(127.0.0.1:12181)] DEBUG org.apache.zookeeper.ClientCnxn - Got ping response for session id: 0x3000005d76a0000 after 2ms.
+19:29:36.461 [pool-5-thread-1] DEBUG org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-test-group-1, groupId=test-group] Received OFFSET_COMMIT response from node 2147483646 for request with header RequestHeader(apiKey=OFFSET_COMMIT, apiVersion=8, clientId=consumer-test-group-1, correlationId=62): OffsetCommitResponseData(throttleTimeMs=0, topics=[OffsetCommitResponseTopic(name='test-topic-922dfc', partitions=[OffsetCommitResponsePartition(partitionIndex=0, errorCode=0)])])
+19:29:36.462 [pool-5-thread-1] DEBUG org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-test-group-1, groupId=test-group] Committed offset 10 for partition test-topic-922dfc-0
+19:29:36.463 [kafka-coordinator-heartbeat-thread | test-group] DEBUG org.apache.kafka.clients.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-test-group-1, groupId=test-group] Heartbeat thread has closed
+19:29:36.463 [pool-5-thread-1] DEBUG org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-test-group-1, groupId=test-group] Executing onLeavePrepare with generation Generation{generationId=1, memberId='consumer-test-group-1-c9e4af1a-b832-4348-9341-5976132bd90c', protocol='range'} and memberId consumer-test-group-1-c9e4af1a-b832-4348-9341-5976132bd90c
+19:29:36.463 [pool-5-thread-1] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-test-group-1, groupId=test-group] Revoke previously assigned partitions test-topic-922dfc-0
+19:29:36.463 [pool-5-thread-1] INFO org.apache.kafka.clients.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-test-group-1, groupId=test-group] Member consumer-test-group-1-c9e4af1a-b832-4348-9341-5976132bd90c sending LeaveGroup request to coordinator localhost:29092 (id: 2147483646 rack: null) due to the consumer is being closed
+19:29:36.464 [pool-5-thread-1] DEBUG org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-test-group-1, groupId=test-group] Sending LEAVE_GROUP request with header RequestHeader(apiKey=LEAVE_GROUP, apiVersion=4, clientId=consumer-test-group-1, correlationId=63) and timeout 30000 to node 2147483646: {group_id=test-group,members=[{member_id=consumer-test-group-1-c9e4af1a-b832-4348-9341-5976132bd90c,group_instance_id=null,_tagged_fields={}}],_tagged_fields={}}
+19:29:36.466 [pool-5-thread-1] DEBUG org.apache.kafka.clients.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-test-group-1, groupId=test-group] Resetting generation due to consumer pro-actively leaving the group
+19:29:36.498 [pool-5-thread-1] DEBUG org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-test-group-1, groupId=test-group] Received LEAVE_GROUP response from node 2147483646 for request with header RequestHeader(apiKey=LEAVE_GROUP, apiVersion=4, clientId=consumer-test-group-1, correlationId=63): LeaveGroupResponseData(throttleTimeMs=0, errorCode=0, members=[MemberResponse(memberId='consumer-test-group-1-c9e4af1a-b832-4348-9341-5976132bd90c', groupInstanceId=null, errorCode=0)])
+19:29:36.498 [pool-5-thread-1] DEBUG org.apache.kafka.clients.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-test-group-1, groupId=test-group] LeaveGroup response with Generation{generationId=1, memberId='consumer-test-group-1-c9e4af1a-b832-4348-9341-5976132bd90c', protocol='range'} returned successfully: ClientResponse(receivedTimeMs=1612726176497, latencyMs=34, disconnected=false, requestHeader=RequestHeader(apiKey=LEAVE_GROUP, apiVersion=4, clientId=consumer-test-group-1, correlationId=63), responseBody=LeaveGroupResponseData(throttleTimeMs=0, errorCode=0, members=[MemberResponse(memberId='consumer-test-group-1-c9e4af1a-b832-4348-9341-5976132bd90c', groupInstanceId=null, errorCode=0)]))
+19:29:36.499 [pool-5-thread-1] INFO org.apache.kafka.common.metrics.Metrics - Metrics scheduler closed
+19:29:36.499 [pool-5-thread-1] INFO org.apache.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+19:29:36.499 [pool-5-thread-1] INFO org.apache.kafka.common.metrics.Metrics - Metrics reporters closed
+19:29:36.507 [pool-5-thread-1] INFO org.apache.kafka.common.utils.AppInfoParser - App info kafka.consumer for consumer-test-group-1 unregistered
+19:29:36.508 [pool-5-thread-1] DEBUG org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-test-group-1, groupId=test-group] Kafka consumer has been closed
 </pre>
 </span>
 </div>
@@ -121,7 +129,7 @@
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 6.8.2</a> at Feb 7, 2021, 1:52:31 AM</p>
+<a href="http://www.gradle.org">Gradle 6.8.2</a> at Feb 7, 2021, 7:30:22 PM</p>
 </div>
 </div>
 </body>
